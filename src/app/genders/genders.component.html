@@ -1,25 +1,25 @@
-<div class="ui-g">
-  <div class="ui-g-12">
+<div class="container">
+  <div class="col-md-12">
     <div class="center">
       <h1>{{title}}</h1>
     </div>
   </div>
-  <div class="ui-g-6">
-    <div class="center ui-g-12">
+  <div class="col-md-6">
+    <div class="center col-md-12">
       <h2>{{leftMenu.title}}</h2>
     </div>
 
-    <div class="tile ui-g-12" *ngFor="let item of leftMenu.data" (click)="select(item)" [ngClass]="item.color">
+    <div class="tile col-md-12" *ngFor="let item of leftMenu.data" (click)="select(item)" [ngClass]="item.color">
       <h3 class="title">{{item.name}}</h3>
     </div>
   </div>
 
-  <div class="ui-g-6">
-    <div class="center ui-g-12">
+  <div class="col-md-6">
+    <div class="center col-md-12">
       <h2>{{rightMenu.title}}</h2>
     </div>
 
-    <div class="tile ui-g-12" *ngFor="let item of rightMenu.data" (click)="select(item)" [ngClass]="item.color">
+    <div class="tile col-md-12" *ngFor="let item of rightMenu.data" (click)="select(item)" [ngClass]="item.color">
       <h3 class="title">{{item.name}}</h3>
     </div>
   </div>

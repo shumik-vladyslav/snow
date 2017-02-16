@@ -15,15 +15,20 @@ import {ResultsComponent} from "./results/results.component";
 import {BracketComponent} from "./bracket/bracket.component";
 import {DataService} from "./shared/service/data.service";
 import {KeysPipe} from "./shared/pipe/keys.pipe";
+import {FooterComponent} from "./footer/footer.component";
+import {HeaderComponent} from "./header/header.component";
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
     HomeComponent,
     GendersComponent,
     ResultsComponent,
     BracketComponent,
-    KeysPipe
+    KeysPipe,
+    FooterComponent,
+
   ],
   imports: [
     BrowserModule,
