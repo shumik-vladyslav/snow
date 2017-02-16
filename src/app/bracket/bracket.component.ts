@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
-import {Router} from "@angular/router";
+import {Router, ActivatedRoute, Params} from "@angular/router";
+import {DataService} from "../shared/service/data.service";
 
 @Component({
   selector: 'bracket',
@@ -7,9 +8,25 @@ import {Router} from "@angular/router";
   templateUrl: './bracket.component.html'
 })
 export class BracketComponent {
+  sport;
+  discipline;
+  gender;
 
-  constructor(private router: Router){
+  constructor(private route: ActivatedRoute, private router: Router, private dataService: DataService){
+    route.params.subscribe((params: Params) => {
+      this.sport = params['sport'];
+      this.discipline = params['discipline'];
+      this.gender = params['gender'];
+      // this.title = Names[this.sport] + " : " + Names[this.discipline]
+      this.getBracket();
+    });
+  }
 
+  getBracket(){
+    this.dataService.getBracket(this.sport, this.discipline, this.gender).subscribe((data) => {
+      // this.data = data.json();
+      console.log(data.json())
+    })
   }
 
   fixMargin = 63;
