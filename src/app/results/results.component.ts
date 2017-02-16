@@ -18,6 +18,8 @@ export class ResultsComponent {
 
   startList;
 
+  result;
+
   constructor(private router: Router, private dataService: DataService){
     this.getResult();
     this.getStartlist();
@@ -25,6 +27,7 @@ export class ResultsComponent {
 
   getResult(){
     this.dataService.getResult().subscribe((data) => {
+      this.result = data.json();
       console.log(data.json())
     })
   }
