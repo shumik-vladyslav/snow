@@ -3,7 +3,7 @@ import {Router} from "@angular/router";
 
 @Component({
   selector: 'bracket',
-  styleUrls: ['./bracket.component.css'],
+  styleUrls: ['./bracket.component.sass'],
   templateUrl: './bracket.component.html'
 })
 export class BracketComponent {
