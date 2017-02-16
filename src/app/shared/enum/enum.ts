@@ -1,0 +1,16 @@
+export let Names = {
+  "SNOWBOARD": "SBD",
+  "SBD": "SNOWBOARD",
+  "FREESTYLE	SKI": "FRS",
+  "FRS": "FREESTYLE	SKI",
+  "Parallel	Giant	Slalom": "PGS",
+  "PGS": "Parallel	Giant	Slalom",
+  "Parallel	Slalom": "PSL",
+  "PSL": "Parallel	Slalom",
+  "Snowboard	Cross":	"SBX",
+  "SBX": "Snowboard	Cross",
+  "Slope	Style":	"SS-",
+  "SS-": "Slope	Style",
+  "Ski	Cross":	"SX-",
+  "SX-": "Ski	Cross",
+};
