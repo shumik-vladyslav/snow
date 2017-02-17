@@ -1,6 +1,14 @@
 import {Component} from '@angular/core';
 import {Router, Params, ActivatedRoute} from "@angular/router";
 import {DataService} from "../shared/service/data.service";
+import {$WebSocket} from 'angular2-websocket/angular2-websocket'
+var ws = new $WebSocket("ws://sbdcis.westeurope.cloudapp.azure.com");
+ws.onMessage(
+  (msg: MessageEvent)=> {
+    console.log("onMessage ", msg.data);
+  },
+  {autoApply: false}
+);
 
 @Component({
   selector: 'results',

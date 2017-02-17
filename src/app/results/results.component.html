@@ -15,7 +15,7 @@
 
 <div class="tab-content">
   <div id="list" class="tab-pane fade in active">
-    <table *ngIf="startList" class="table table-condensed">
+    <table *ngIf="startList" class="table table-condensed table-striped">
       <thead>
       <tr>
         <th *ngFor="let key of startListOptions | keys">{{startListOptions[key]}}</th>
@@ -29,7 +29,7 @@
             {{item['Surname']}} {{item[key]}}
           </span>
           <span *ngIf="key === 'NOC'">
-            <img src="./../assets/{{item[key]}}.png" style="height: 25px;">
+            <img src="./../assets/{{item[key]}}.png" style="height: 25px;"> {{item[key]}}
           </span>
         </td>
       </tr>
@@ -37,7 +37,7 @@
     </table>
   </div>
   <div id="results" class="tab-pane fade">
-    <table *ngIf="result" class="table table-condensed">
+    <table *ngIf="result" class="table table-condensed table-striped">
       <thead>
       <tr>
         <th *ngFor="let key of resultOptions | keys">{{resultOptions[key]}}</th>
@@ -69,7 +69,7 @@
             {{item['Surname']}} {{item[key]}}
           </span>
           <span *ngIf="key === 'NOC'">
-            <img src="./../assets/{{item[key]}}.png" style="height: 25px;">
+            <img src="./../assets/{{item[key]}}.png" style="height: 25px;">{{item[key]}}
           </span>
         </td>
       </tr>
