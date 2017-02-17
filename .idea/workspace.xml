@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="0f347942-0653-4c8e-a5e0-36e8a8a5a417" name="Default" comment="" />
+=======
     <list default="true" id="b7bb531a-788c-430c-85eb-a7cfdc57fc14" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="angular2-seed.iws" />
     <ignored path=".idea/workspace.xml" />
+>>>>>>> d3d80a9f1a417f70a36dbac3940f2ede5c41b05f
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -143,6 +147,12 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
+    <option name="x" value="-29" />
+    <option name="y" value="66" />
+    <option name="width" value="1932" />
+    <option name="height" value="1056" />
+=======
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -157,6 +167,7 @@
     <OptionsSetting value="true" id="Edit" />
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
+>>>>>>> d3d80a9f1a417f70a36dbac3940f2ede5c41b05f
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -381,18 +392,51 @@
       <created>1487257346078</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
+      <updated>1487252486666</updated>
+      <workItem from="1487252487935" duration="5296000" />
+=======
       <updated>1487257346078</updated>
+<<<<<<< HEAD
+      <workItem from="1487257347671" duration="125000" />
+>>>>>>> d3d80a9f1a417f70a36dbac3940f2ede5c41b05f
+=======
       <workItem from="1487257347671" duration="924000" />
+<<<<<<< HEAD
       <workItem from="1487319345181" duration="8409000" />
+=======
+      <workItem from="1487319345181" duration="7039000" />
+>>>>>>> cfbd05da40aa1da33bb7d3f45e5a9ab86d244e94
+>>>>>>> 1e321c529ea93360bb41cd130b020c4e9496e107
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="9333000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="5296000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-29" y="66" width="1932" height="1056" extended-state="0" />
+    <editor active="false" />
+=======
+    <option name="totallyTimeSpent" value="125000" />
+=======
+    <option name="totallyTimeSpent" value="7963000" />
+>>>>>>> cfbd05da40aa1da33bb7d3f45e5a9ab86d244e94
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+>>>>>>> d3d80a9f1a417f70a36dbac3940f2ede5c41b05f
+>>>>>>> 1e321c529ea93360bb41cd130b020c4e9496e107
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />

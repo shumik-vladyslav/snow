@@ -1,3 +1,25 @@
-nav>li>a{
-  padding: 10px 50px!important;
+ul.nav.nav-tabs{
+  text-align: center!important;
+  padding: 5px 0;
+}
+ul.nav.nav-tabs li{
+  float: none;
+  display: inline-block;
+}
+.tabs li {
+  float: left!important;
+}
+ul.nav.nav-tabs li button{
+  background-color: paleturquoise;
+  border: 1px solid black;
+  padding: 3px 16px;
+  outline: none;
+}
+
+ul.nav.nav-tabs li button:hover{
+  background-color: #8acaca;
+}
+ul.nav.nav-tabs li button:active{
+  background-color: #8acaca;
+  transform: translateY(4px);
 }

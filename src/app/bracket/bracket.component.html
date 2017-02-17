@@ -23,7 +23,7 @@
                 <span>Bib</span>
               </div>
               <div class="col-md-6">
-                <span class="stage">EF 1 (1/16)</span>
+                <span class="stage">EightFinal 1</span>
               </div>
               <div class="col-md-3">
                 <span>Rk</span>
@@ -33,10 +33,14 @@
           <div class="col-md-12 groupe">
             <div *ngFor="let item of data[0]" class="row">
               <div class="col-md-2">
-                <span>{{item.Bib }}</span>
+                <!--<span>{{item.Bib }}</span>-->
+                <button class="circleRed"></button>
               </div>
-              <div class="col-md-7">
+              <div class="col-md-6">
                 <span>{{ item.Name }} {{item.Surname}}</span>
+              </div>
+              <div class="col-md-1 flag">
+                <img src="../../assets/ukr.png" alt="FLAG">
               </div>
               <div class="col-md-2">
                 <span>{{ item.NOC }}</span>
@@ -53,7 +57,7 @@
                 <span>Bib</span>
               </div>
               <div class="col-md-6">
-                <span class="stage">EF 2 (2/16)</span>
+                <span class="stage">EightFinal 2</span>
               </div>
               <div class="col-md-3">
                 <span>Rk</span>
@@ -63,71 +67,14 @@
           <div class="col-md-12 groupe">
             <div *ngFor="let item of data[0]" class="row">
               <div class="col-md-2">
-                <span>{{item.Bib }}</span>
-              </div>
-              <div class="col-md-7">
-                <span>{{ item.Name }} {{item.Surname}}</span>
-              </div>
-              <div class="col-md-2">
-                <span>{{ item.NOC }}</span>
-              </div>
-              <div class="col-md-1 rank">
-                <span>{{ item.Position }}</span>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-12 headerGroupe">
-            <div class="row">
-              <div class="col-md-3">
-                <span>Bib</span>
+                <!--<span>{{item.Bib }}</span>-->
+                <button class="circleGreen"></button>
               </div>
               <div class="col-md-6">
-                <span class="stage">EF 3 (3/16)</span>
-              </div>
-              <div class="col-md-3">
-                <span>Rk</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 groupe">
-            <div *ngFor="let item of data[0]" class="row">
-              <div class="col-md-2">
-                <span>{{item.Bib }}</span>
-              </div>
-              <div class="col-md-7">
                 <span>{{ item.Name }} {{item.Surname}}</span>
               </div>
-              <div class="col-md-2">
-                <span>{{ item.NOC }}</span>
-              </div>
-              <div class="col-md-1 rank">
-                <span>{{ item.Position }}</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-12 headerGroupe">
-            <div class="row">
-              <div class="col-md-3">
-                <span>Bib</span>
-              </div>
-              <div class="col-md-6">
-                <span class="stage">EF 4 (4/16)</span>
-              </div>
-              <div class="col-md-3">
-                <span>Rk</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 groupe">
-            <div *ngFor="let item of data[0]" class="row">
-              <div class="col-md-2">
-                <span>{{item.Bib }}</span>
-              </div>
-              <div class="col-md-7">
-                <span>{{ item.Name }} {{item.Surname}}</span>
+              <div class="col-md-1 flag">
+                <img src="../../assets/ukr.png" alt="FLAG">
               </div>
               <div class="col-md-2">
                 <span>{{ item.NOC }}</span>
@@ -145,7 +92,7 @@
                 <span>Bib</span>
               </div>
               <div class="col-md-6">
-                <span class="stage">EF 5 (5/16)</span>
+                <span class="stage">EightFinal 3</span>
               </div>
               <div class="col-md-3">
                 <span>Rk</span>
@@ -155,10 +102,14 @@
           <div class="col-md-12 groupe">
             <div *ngFor="let item of data[0]" class="row">
               <div class="col-md-2">
-                <span>{{item.Bib }}</span>
+                <!--<span>{{item.Bib }}</span>-->
+                <button class="circleBlue"></button>
               </div>
-              <div class="col-md-7">
+              <div class="col-md-6">
                 <span>{{ item.Name }} {{item.Surname}}</span>
+              </div>
+              <div class="col-md-1 flag">
+                <img src="../../assets/ukr.png" alt="FLAG">
               </div>
               <div class="col-md-2">
                 <span>{{ item.NOC }}</span>
@@ -176,7 +127,7 @@
                 <span>Bib</span>
               </div>
               <div class="col-md-6">
-                <span class="stage">EF 6 (6/16)</span>
+                <span class="stage">EightFinal 4</span>
               </div>
               <div class="col-md-3">
                 <span>Rk</span>
@@ -186,10 +137,14 @@
           <div class="col-md-12 groupe">
             <div *ngFor="let item of data[0]" class="row">
               <div class="col-md-2">
-                <span>{{item.Bib }}</span>
+                <!--<span>{{item.Bib }}</span>-->
+                <button class="circleYellow"></button>
               </div>
-              <div class="col-md-7">
+              <div class="col-md-6">
                 <span>{{ item.Name }} {{item.Surname}}</span>
+              </div>
+              <div class="col-md-1 flag">
+                <img src="../../assets/ukr.png" alt="FLAG">
               </div>
               <div class="col-md-2">
                 <span>{{ item.NOC }}</span>
@@ -200,13 +155,14 @@
             </div>
           </div>
 
+
           <div class="col-md-12 headerGroupe">
             <div class="row">
               <div class="col-md-3">
                 <span>Bib</span>
               </div>
               <div class="col-md-6">
-                <span class="stage">EF 7 (7/16)</span>
+                <span class="stage">EightFinal 5</span>
               </div>
               <div class="col-md-3">
                 <span>Rk</span>
@@ -216,10 +172,14 @@
           <div class="col-md-12 groupe">
             <div *ngFor="let item of data[0]" class="row">
               <div class="col-md-2">
-                <span>{{item.Bib }}</span>
+                <!--<span>{{item.Bib }}</span>-->
+                <button class="circleRed"></button>
               </div>
-              <div class="col-md-7">
+              <div class="col-md-6">
                 <span>{{ item.Name }} {{item.Surname}}</span>
+              </div>
+              <div class="col-md-1 flag">
+                <img src="../../assets/ukr.png" alt="FLAG">
               </div>
               <div class="col-md-2">
                 <span>{{ item.NOC }}</span>
@@ -230,13 +190,14 @@
             </div>
           </div>
 
+
           <div class="col-md-12 headerGroupe">
             <div class="row">
               <div class="col-md-3">
                 <span>Bib</span>
               </div>
               <div class="col-md-6">
-                <span class="stage">EF 8 (8/16)</span>
+                <span class="stage">EightFinal 6</span>
               </div>
               <div class="col-md-3">
                 <span>Rk</span>
@@ -246,10 +207,14 @@
           <div class="col-md-12 groupe">
             <div *ngFor="let item of data[0]" class="row">
               <div class="col-md-2">
-                <span>{{item.Bib }}</span>
+                <!--<span>{{item.Bib }}</span>-->
+                <button class="circleBlue"></button>
               </div>
-              <div class="col-md-7">
+              <div class="col-md-6">
                 <span>{{ item.Name }} {{item.Surname}}</span>
+              </div>
+              <div class="col-md-1 flag">
+                <img src="../../assets/ukr.png" alt="FLAG">
               </div>
               <div class="col-md-2">
                 <span>{{ item.NOC }}</span>
@@ -259,6 +224,77 @@
               </div>
             </div>
           </div>
+
+
+          <div class="col-md-12 headerGroupe">
+            <div class="row">
+              <div class="col-md-3">
+                <span>Bib</span>
+              </div>
+              <div class="col-md-6">
+                <span class="stage">EightFinal 7</span>
+              </div>
+              <div class="col-md-3">
+                <span>Rk</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 groupe">
+            <div *ngFor="let item of data[0]" class="row">
+              <div class="col-md-2">
+                <!--<span>{{item.Bib }}</span>-->
+                <button class="circleGreen"></button>
+              </div>
+              <div class="col-md-6">
+                <span>{{ item.Name }} {{item.Surname}}</span>
+              </div>
+              <div class="col-md-1 flag">
+                <img src="../../assets/ukr.png" alt="FLAG">
+              </div>
+              <div class="col-md-2">
+                <span>{{ item.NOC }}</span>
+              </div>
+              <div class="col-md-1 rank">
+                <span>{{ item.Position }}</span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-12 headerGroupe">
+            <div class="row">
+              <div class="col-md-3">
+                <span>Bib</span>
+              </div>
+              <div class="col-md-6">
+                <span class="stage">EightFinal 8</span>
+              </div>
+              <div class="col-md-3">
+                <span>Rk</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 groupe">
+            <div *ngFor="let item of data[0]" class="row">
+              <div class="col-md-2">
+                <!--<span>{{item.Bib }}</span>-->
+                <button class="circleYellow"></button>
+              </div>
+              <div class="col-md-6">
+                <span>{{ item.Name }} {{item.Surname}}</span>
+              </div>
+              <div class="col-md-1 flag">
+                <img src="../../assets/ukr.png" alt="FLAG">
+              </div>
+              <div class="col-md-2">
+                <span>{{ item.NOC }}</span>
+              </div>
+              <div class="col-md-1 rank">
+                <span>{{ item.Position }}</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -271,7 +307,7 @@
                 <span>Bib</span>
               </div>
               <div class="col-md-6">
-                <span class="stage">QF 1 (9/16)</span>
+                <span class="stage">QuarterFinal 9</span>
               </div>
               <div class="col-md-3">
                 <span>Rk</span>
@@ -281,10 +317,14 @@
           <div class="col-md-12 groupe">
             <div *ngFor="let item of data[0]" class="row">
               <div class="col-md-2">
-                <span>{{item.Bib }}</span>
+                <!--<span>{{item.Bib }}</span>-->
+                <button class="circleYellow"></button>
               </div>
-              <div class="col-md-7">
+              <div class="col-md-6">
                 <span>{{ item.Name }} {{item.Surname}}</span>
+              </div>
+              <div class="col-md-1 flag">
+                <img src="../../assets/ukr.png" alt="FLAG">
               </div>
               <div class="col-md-2">
                 <span>{{ item.NOC }}</span>
@@ -304,7 +344,7 @@
                 <span>Bib</span>
               </div>
               <div class="col-md-6">
-                <span class="stage">QF 10 (10/16)</span>
+                <span class="stage">QuarterFinal 10</span>
               </div>
               <div class="col-md-3">
                 <span>Rk</span>
@@ -314,10 +354,14 @@
           <div class="col-md-12 groupe">
             <div *ngFor="let item of data[0]" class="row">
               <div class="col-md-2">
-                <span>{{item.Bib }}</span>
+                <!--<span>{{item.Bib }}</span>-->
+                <button class="circleYellow"></button>
               </div>
-              <div class="col-md-7">
+              <div class="col-md-6">
                 <span>{{ item.Name }} {{item.Surname}}</span>
+              </div>
+              <div class="col-md-1 flag">
+                <img src="../../assets/ukr.png" alt="FLAG">
               </div>
               <div class="col-md-2">
                 <span>{{ item.NOC }}</span>
@@ -336,7 +380,7 @@
                 <span>Bib</span>
               </div>
               <div class="col-md-6">
-                <span class="stage">QF 11 (11/16)</span>
+                <span class="stage">QuarterFinal 11</span>
               </div>
               <div class="col-md-3">
                 <span>Rk</span>
@@ -346,10 +390,14 @@
           <div class="col-md-12 groupe">
             <div *ngFor="let item of data[0]" class="row">
               <div class="col-md-2">
-                <span>{{item.Bib }}</span>
+                <!--<span>{{item.Bib }}</span>-->
+                <button class="circleYellow"></button>
               </div>
-              <div class="col-md-7">
+              <div class="col-md-6">
                 <span>{{ item.Name }} {{item.Surname}}</span>
+              </div>
+              <div class="col-md-1 flag">
+                <img src="../../assets/ukr.png" alt="FLAG">
               </div>
               <div class="col-md-2">
                 <span>{{ item.NOC }}</span>
@@ -369,7 +417,7 @@
                 <span>Bib</span>
               </div>
               <div class="col-md-6">
-                <span class="stage">QF 12 (12/16)</span>
+                <span class="stage">QuarterFinal 12</span>
               </div>
               <div class="col-md-3">
                 <span>Rk</span>
@@ -379,10 +427,14 @@
           <div class="col-md-12 groupe">
             <div *ngFor="let item of data[0]" class="row">
               <div class="col-md-2">
-                <span>{{item.Bib }}</span>
+                <!--<span>{{item.Bib }}</span>-->
+                <button class="circleYellow"></button>
               </div>
-              <div class="col-md-7">
+              <div class="col-md-6">
                 <span>{{ item.Name }} {{item.Surname}}</span>
+              </div>
+              <div class="col-md-1 flag">
+                <img src="../../assets/ukr.png" alt="FLAG">
               </div>
               <div class="col-md-2">
                 <span>{{ item.NOC }}</span>
@@ -406,7 +458,7 @@
                 <span>Bib</span>
               </div>
               <div class="col-md-6">
-                <span class="stage">QF 12 (12/16)</span>
+                <span class="stage">SemiFinal 13</span>
               </div>
               <div class="col-md-3">
                 <span>Rk</span>
@@ -416,10 +468,14 @@
           <div class="col-md-12 groupe">
             <div *ngFor="let item of data[0]" class="row">
               <div class="col-md-2">
-                <span>{{item.Bib }}</span>
+                <!--<span>{{item.Bib }}</span>-->
+                <button class="circleYellow"></button>
               </div>
-              <div class="col-md-7">
+              <div class="col-md-6">
                 <span>{{ item.Name }} {{item.Surname}}</span>
+              </div>
+              <div class="col-md-1 flag">
+                <img src="../../assets/ukr.png" alt="FLAG">
               </div>
               <div class="col-md-2">
                 <span>{{ item.NOC }}</span>
@@ -439,7 +495,7 @@
                 <span>Bib</span>
               </div>
               <div class="col-md-6">
-                <span class="stage">SF 13 (13/16)</span>
+                <span class="stage">SemiFinal 14</span>
               </div>
               <div class="col-md-3">
                 <span>Rk</span>
@@ -449,10 +505,14 @@
           <div class="col-md-12 groupe">
             <div *ngFor="let item of data[0]" class="row">
               <div class="col-md-2">
-                <span>{{item.Bib }}</span>
+                <!--<span>{{item.Bib }}</span>-->
+                <button class="circleYellow"></button>
               </div>
-              <div class="col-md-7">
+              <div class="col-md-6">
                 <span>{{ item.Name }} {{item.Surname}}</span>
+              </div>
+              <div class="col-md-1 flag">
+                <img src="../../assets/ukr.png" alt="FLAG">
               </div>
               <div class="col-md-2">
                 <span>{{ item.NOC }}</span>
@@ -476,7 +536,7 @@
                 <span>Bib</span>
               </div>
               <div class="col-md-6">
-                <span class="stage">Small Final(15/16)</span>
+                <span class="stage">Small Final 15</span>
               </div>
               <div class="col-md-3">
                 <span>Rk</span>
@@ -486,10 +546,14 @@
           <div class="col-md-12 groupe">
             <div *ngFor="let item of data[0]" class="row">
               <div class="col-md-2">
-                <span>{{item.Bib }}</span>
+                <!--<span>{{item.Bib }}</span>-->
+                <button class="circleYellow"></button>
               </div>
-              <div class="col-md-7">
+              <div class="col-md-6">
                 <span>{{ item.Name }} {{item.Surname}}</span>
+              </div>
+              <div class="col-md-1 flag">
+                <img src="../../assets/ukr.png" alt="FLAG">
               </div>
               <div class="col-md-2">
                 <span>{{ item.NOC }}</span>
@@ -501,6 +565,7 @@
           </div>
         </div>
 
+
         <div [ngStyle]="{'margin-top': margin - 36 + 'px'}" class="col-md-12 wrapperGroup">
           <div class="col-md-12 headerGroupe">
             <div class="row">
@@ -508,7 +573,7 @@
                 <span>Bib</span>
               </div>
               <div class="col-md-6">
-                <span class="stage">Big Final (16/16)</span>
+                <span class="stage">Big Final 16</span>
               </div>
               <div class="col-md-3">
                 <span>Rk</span>
@@ -518,10 +583,14 @@
           <div class="col-md-12 groupe">
             <div *ngFor="let item of data[0]" class="row">
               <div class="col-md-2">
-                <span>{{item.Bib }}</span>
+                <!--<span>{{item.Bib }}</span>-->
+                <button class="circleYellow"></button>
               </div>
-              <div class="col-md-7">
+              <div class="col-md-6">
                 <span>{{ item.Name }} {{item.Surname}}</span>
+              </div>
+              <div class="col-md-1 flag">
+                <img src="../../assets/ukr.png" alt="FLAG">
               </div>
               <div class="col-md-2">
                 <span>{{ item.NOC }}</span>
