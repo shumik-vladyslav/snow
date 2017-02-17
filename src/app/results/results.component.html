@@ -1,4 +1,14 @@
 <ul class="nav nav-tabs">
+  <li class="active"><button (click)="getResult('0001', '01--')">Heat</button></li>
+  <li class="active"><button (click)="getResult('0002', '01--')">Heat2</button></li>
+  <li class="active"><button (click)="getResult('0003', '01--')">Heat3</button></li>
+</ul>
+<ul class="nav nav-tabs">
+  <li class="active"><button (click)="getResult(heat, '01--')">Run</button></li>
+  <li class="active"><button (click)="getResult(heat, '02--')">Run2</button></li>
+  <li class="active"><button (click)="getResult(heat, '03--')">Run3</button></li>
+</ul>
+<ul class="nav nav-tabs">
   <li class="active"><a data-toggle="tab" href="#list">Start List</a></li>
   <li><a data-toggle="tab" href="#results">Results</a></li>
 </ul>
@@ -36,10 +46,24 @@
       <tbody>
       <tr *ngFor="let item of result">
         <td *ngFor="let key of resultOptions | keys">
-          <span *ngIf="key !== 'NOC' && key !== 'Name' && key !== 'Results'">{{item[key]}}</span>
-          <span *ngIf="key === 'Results'">
-            {{item[key][0].Result}} - {{item[key][1].Result}}
+          <span *ngIf="key !== 'NOC' && key !== 'Name' && key !== 'Results1' && key !== 'Results2' && key !== 'ColorCourse'">{{item[key]}}</span>
+          <span *ngIf="key === 'ColorCourse'">
 
+            <svg *ngIf="item['ColorCourse'] === 'BLUE'" width="50" height="50">
+              <rect x="0" y="0" width="20" height="20"
+                    style="fill:blue" />
+            </svg>
+
+            <svg *ngIf="item['ColorCourse'] === 'RED'" width="50" height="50">
+              <rect x="0" y="0" width="20" height="20"
+                    style="fill:red" />
+            </svg>
+          </span>
+          <span *ngIf="key === 'Results1'">
+            {{item["Results"][0].Result}}
+          </span>
+          <span *ngIf="key === 'Results2'">
+            {{item["Results"][1].Result}}
           </span>
           <span *ngIf="key === 'Name'">
             {{item['Surname']}} {{item[key]}}
