@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f347942-0653-4c8e-a5e0-36e8a8a5a417" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/header/header.component.sass" afterPath="$PROJECT_DIR$/src/app/header/header.component.sass" />
-    </list>
+    <list default="true" id="0f347942-0653-4c8e-a5e0-36e8a8a5a417" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -158,8 +156,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="381" />
-    <option name="y" value="126" />
+    <option name="x" value="-29" />
+    <option name="y" value="66" />
     <option name="width" value="1932" />
     <option name="height" value="1056" />
   </component>
@@ -411,16 +409,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487252486666</updated>
-      <workItem from="1487252487935" duration="4694000" />
+      <workItem from="1487252487935" duration="5296000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4694000" />
+    <option name="totallyTimeSpent" value="5296000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="381" y="126" width="1932" height="1056" extended-state="0" />
-    <editor active="true" />
+    <frame x="-29" y="66" width="1932" height="1056" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25052193" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
