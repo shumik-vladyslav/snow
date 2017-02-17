@@ -30,13 +30,17 @@
     <table *ngIf="result" class="table table-condensed">
       <thead>
       <tr>
-        <th *ngFor="let key of startListOptions | keys">{{startListOptions[key]}}</th>
+        <th *ngFor="let key of resultOptions | keys">{{resultOptions[key]}}</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let item of result">
-        <td *ngFor="let key of startListOptions | keys">
-          <span *ngIf="key !== 'NOC' && key !== 'Name'">{{item[key]}}</span>
+        <td *ngFor="let key of resultOptions | keys">
+          <span *ngIf="key !== 'NOC' && key !== 'Name' && key !== 'Results'">{{item[key]}}</span>
+          <span *ngIf="key === 'Results'">
+            {{item[key][0].Result}} - {{item[key][1].Result}}
+
+          </span>
           <span *ngIf="key === 'Name'">
             {{item['Surname']}} {{item[key]}}
           </span>

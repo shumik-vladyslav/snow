@@ -9,15 +9,15 @@ export class DataService {
   private url = 'http://sbdcis.westeurope.cloudapp.azure.com/api/';  // URL to web API
   constructor (private http: Http) {}
 
-  getResult(){
-    return this.http.get(this.url + "getResult/SBD/SBX/M/QUAL/----/----")
+  getResult(discipline, sport, gender, phase, heat, run){
+    return this.http.get(this.url + `getResult/${sport}/${discipline}/${gender}/${phase}/${heat}/${run}`)
   }
 
-  getStartlist(){
-    return this.http.get(this.url + "getStartlist/SBD/SBX/M/QUAL/----/----")
+  getStartlist(discipline, sport, gender, phase, heat, run){
+    return this.http.get(this.url + `getStartlist/${sport}/${discipline}/${gender}/${phase}/${heat}/${run}`)
   }
 
-  getBracket(){
-    return this.http.get(this.url + "getBracket/SBD/SBX/M")
+  getBracket(sport, discipline, gender){
+    return this.http.get(this.url + `getBracket/${sport}/${discipline}/${gender}`)
   }
 }
