@@ -64,35 +64,43 @@ export class ResultsComponent {
 
     });
 
-    this.getResult();
-    this.getStartlist();
+    // this.getResult();
+    // this.getStartlist();
+    this.getButtons();
   }
 
-  getResult(heat?, run?){
-    if(run){
-      this.run = run;
-      this.heat = heat;
-      this.resultOptions = {
-        "RankOrder": "Rank Order",
-        "ColorCourse": "Color Course",
-        "BIB": "BIB",
-        "Name": "Name",
-        "NOC": "Country",
-        "Result": "Result",
-        "Diff": "Diff"
-      } as any;
-      this.getStartlist();
-    }
-    this.dataService.getResult(this.discipline, this.sport, this.gender, this.phase, this.heat, this.run).subscribe((data) => {
-      this.result = data.json();
-      console.log(data.json())
+  buttonsResults = [];
+  buttonsStartlist = [];
+
+  getButtons(){
+    this.dataService.getButtons(this.sport, this.discipline, this.gender, this.phase).subscribe((data) => {
+      console.log(data)
+      for(let item of data){
+        if(item['Status'] === 'SCHEDULED'){
+          this.buttonsStartlist.push(item);
+        }else{
+          this.buttonsResults.push(item);
+        }
+      }
+
     })
   }
 
-  getStartlist(){
-    this.dataService.getStartlist(this.discipline, this.sport, this.gender, this.phase, this.heat, this.run).subscribe((data) => {
-      this.startList = data.json();
-      console.log(data.json())
+
+  getResult(key){
+   console.log(key)
+    this.startList = null;
+    this.dataService.getResult(key.discipline, key.sport, key.gender, key.phase, key.heat, key.run).subscribe((data) => {
+      this.result = data;
+      console.log(data)
+    })
+  }
+
+  getStartlist(key){
+    this.result = null;
+    this.dataService.getStartlist(key.discipline, key.sport, key.gender, key.phase, key.heat, key.run).subscribe((data) => {
+      this.startList = data;
+      // console.log(data.json())
     })
   }
 }
