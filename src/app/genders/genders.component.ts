@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {ActivatedRoute, Router, Params} from "@angular/router";
 import {Names} from "../shared/enum/enum";
+import {DataService} from "../shared/service/data.service";
 
 @Component({
   selector: 'genders',
@@ -11,14 +12,12 @@ export class GendersComponent {
   discipline = "";
   sport = "";
 
-  title = "";
-
-  constructor(private route: ActivatedRoute, private router: Router){
+  constructor(private route: ActivatedRoute, private router: Router, private dataService: DataService){
     route.params.subscribe((params: Params) => {
       this.discipline = params['discipline'];
       this.sport = params['sport'];
 
-      this.title = Names[this.sport] + " : " + Names[this.discipline]
+      dataService.headerText.next(Names[this.sport] + " " + Names[this.discipline]);
 
     });
   }

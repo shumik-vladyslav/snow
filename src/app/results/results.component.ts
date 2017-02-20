@@ -2,13 +2,19 @@ import {Component} from '@angular/core';
 import {Router, Params, ActivatedRoute} from "@angular/router";
 import {DataService} from "../shared/service/data.service";
 import {$WebSocket} from 'angular2-websocket/angular2-websocket'
-var ws = new $WebSocket("ws://sbdcis.westeurope.cloudapp.azure.com");
-ws.onMessage(
-  (msg: MessageEvent)=> {
-    console.log("onMessage ", msg.data);
-  },
-  {autoApply: false}
-);
+import {Names} from "../shared/enum/enum";
+declare var io;
+var socket = io('ws://sbdcis.westeurope.cloudapp.azure.com');
+socket.on('connect', function(){
+  // socket.emit("getEventCount","111");
+});
+socket.on("result", (list) => {
+  console.log(13,list);
+});
+
+socket.on('disconnect', function(){
+  console.log(13)
+});
 
 @Component({
   selector: 'results',
@@ -61,6 +67,7 @@ export class ResultsComponent {
       this.heat = params['heat'];
       this.run = params['run'];
       // this.title = Names[this.sport] + " : " + Names[this.discipline]
+      dataService.headerText.next(Names[this.sport] + " " + Names[this.discipline] + " " + Names[this.gender]+ " - " + Names[this.phase]);
 
     });
 
@@ -71,19 +78,21 @@ export class ResultsComponent {
 
   buttonsResults = [];
   buttonsStartlist = [];
+  showError = false;
 
   getButtons(){
     this.dataService.getButtons(this.sport, this.discipline, this.gender, this.phase).subscribe((data) => {
       console.log(data)
       for(let item of data){
-        if(item['Status'] === 'SCHEDULED'){
+        if(item['Type'] === 'STARTLIST'){
           this.buttonsStartlist.push(item);
         }else{
           this.buttonsResults.push(item);
         }
       }
+      this.showError = false;
 
-    })
+    }, () => this.showError = true )
   }
 
 
@@ -93,7 +102,9 @@ export class ResultsComponent {
     this.dataService.getResult(key.discipline, key.sport, key.gender, key.phase, key.heat, key.run).subscribe((data) => {
       this.result = data;
       console.log(data)
-    })
+      this.showError = false;
+
+    }, () => this.showError = true)
   }
 
   getStartlist(key){
@@ -101,6 +112,8 @@ export class ResultsComponent {
     this.dataService.getStartlist(key.discipline, key.sport, key.gender, key.phase, key.heat, key.run).subscribe((data) => {
       this.startList = data;
       // console.log(data.json())
-    })
+      this.showError = false;
+
+    }, () => this.showError = true)
   }
 }

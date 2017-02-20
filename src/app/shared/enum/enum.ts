@@ -13,4 +13,8 @@ export let Names = {
   "SS-": "Slope	Style",
   "Ski	Cross":	"SX-",
   "SX-": "Ski	Cross",
+  "M": "Men",
+  "W": "Ladies",
+  "QUAL": "Qualification",
+  "FNL-": "Finals"
 };

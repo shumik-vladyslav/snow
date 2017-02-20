@@ -1,13 +1,17 @@
 <ul style="padding-top: 81px" class="nav nav-tabs">
   <li *ngFor="let item of buttonsStartlist; let i = index">
-    <button *ngIf="item['Status'] === 'SCHEDULED'" (click)="getStartlist(item.Key)">Heat{{i + 1}}</button>
+    <button *ngIf="item['Type'] === 'STARTLIST'" (click)="getStartlist(item.Key)">{{item.Text}}</button>
   </li>
 </ul>
 <ul class="nav nav-tabs">
   <li *ngFor="let item of buttonsResults; let i = index">
-    <button *ngIf="item['Status'] === 'FINISHED'" (click)="getResult(item.Key)">Run{{i + 1}}</button>
+    <button *ngIf="item['Type'] === 'RESULT'" (click)="getResult(item.Key)">{{item.Text}}</button>
   </li>
 </ul>
+
+<div *ngIf="showError" class="center-available">
+  No Data Available
+</div>
 
 <table *ngIf="result" class="table table-condensed table-striped">
   <thead>

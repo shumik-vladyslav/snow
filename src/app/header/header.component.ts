@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {DataService} from "../shared/service/data.service";
 
 
 @Component({
@@ -7,5 +8,11 @@ import {Component} from '@angular/core';
   templateUrl: './header.component.html'
 })
 export class HeaderComponent {
+  text = "";
 
+  constructor(private dataService: DataService){
+    dataService.headerText.subscribe((data) => {
+      this.text = data;
+    })
+  }
 }
