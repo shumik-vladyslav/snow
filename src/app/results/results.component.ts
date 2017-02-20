@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ApplicationRef} from '@angular/core';
 import {Router, Params, ActivatedRoute} from "@angular/router";
 import {DataService} from "../shared/service/data.service";
 import {$WebSocket} from 'angular2-websocket/angular2-websocket'
@@ -6,11 +6,8 @@ import {Names} from "../shared/enum/enum";
 declare var io;
 var socket = io('ws://sbdcis.westeurope.cloudapp.azure.com');
 socket.on('connect', function(){
-  // socket.emit("getEventCount","111");
 });
-socket.on("result", (list) => {
-  console.log(13,list);
-});
+
 
 socket.on('disconnect', function(){
   console.log(13)
@@ -57,7 +54,8 @@ export class ResultsComponent {
 
   run;
 
-  constructor(private route: ActivatedRoute, private router: Router, private dataService: DataService){
+  constructor(private route: ActivatedRoute, private router: Router, private dataService: DataService,
+  private applicationRef:ApplicationRef ){
 
     route.params.subscribe((params: Params) => {
       this.discipline = params['discipline'];
@@ -74,6 +72,16 @@ export class ResultsComponent {
     // this.getResult();
     // this.getStartlist();
     this.getButtons();
+
+    socket.on("result", (key) => {
+      console.log(13,key);
+      if(key['Type'] === 'STARTLIST'){
+        this.getStartlist(key);
+      }else{
+        this.getResult(key);
+      }
+
+    });
   }
 
   buttonsResults = [];
@@ -101,19 +109,23 @@ export class ResultsComponent {
     this.startList = null;
     this.dataService.getResult(key.discipline, key.sport, key.gender, key.phase, key.heat, key.run).subscribe((data) => {
       this.result = data;
-      console.log(data)
+      console.log(data, this.result)
       this.showError = false;
-
+      this.applicationRef.tick();
     }, () => this.showError = true)
   }
 
   getStartlist(key){
+    console.log(key)
+
     this.result = null;
     this.dataService.getStartlist(key.discipline, key.sport, key.gender, key.phase, key.heat, key.run).subscribe((data) => {
       this.startList = data;
       // console.log(data.json())
-      this.showError = false;
+      console.log(data, this.startList)
 
+      this.showError = false;
+      this.applicationRef.tick();
     }, () => this.showError = true)
   }
 }
