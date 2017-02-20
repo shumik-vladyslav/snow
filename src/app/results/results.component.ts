@@ -4,14 +4,7 @@ import {DataService} from "../shared/service/data.service";
 import {$WebSocket} from 'angular2-websocket/angular2-websocket'
 import {Names} from "../shared/enum/enum";
 declare var io;
-var socket = io('ws://sbdcis.westeurope.cloudapp.azure.com');
-socket.on('connect', function(){
-});
 
-
-socket.on('disconnect', function(){
-  console.log(13)
-});
 
 @Component({
   selector: 'results',
@@ -32,11 +25,15 @@ export class ResultsComponent {
     "BIB": "BIB",
     "Name": "Name",
     "NOC": "Country",
-    "Results1": "Results",
-    "Results2": "Results",
+    "Blue": "Blue",
+    "Red": "Red",
+    // "Results1": "Results",
+    // "Results2": "Results",
     "Result": "Result",
     "Diff": "Diff"
   };
+
+  GridConfig;
 
   startList;
 
@@ -53,6 +50,8 @@ export class ResultsComponent {
   heat;
 
   run;
+
+  data;
 
   constructor(private route: ActivatedRoute, private router: Router, private dataService: DataService,
   private applicationRef:ApplicationRef ){
@@ -73,8 +72,18 @@ export class ResultsComponent {
     // this.getStartlist();
     this.getButtons();
 
+    var socket = io('ws://sbdcis.westeurope.cloudapp.azure.com');
+    socket.on('connect', function(){
+    });
+
+
+    socket.on('disconnect', function(){
+      console.log(13)
+    });
+
     socket.on("result", (key) => {
       console.log(13,key);
+      if(key['sport'] === this.sport)
       if(key['Type'] === 'STARTLIST'){
         this.getStartlist(key);
       }else{
@@ -82,6 +91,11 @@ export class ResultsComponent {
       }
 
     });
+
+    socket.on("current", (key) => {
+      console.log(13,key);
+    });
+
   }
 
   buttonsResults = [];
@@ -91,6 +105,7 @@ export class ResultsComponent {
   getButtons(){
     this.dataService.getButtons(this.sport, this.discipline, this.gender, this.phase).subscribe((data) => {
       console.log(data)
+
       for(let item of data){
         if(item['Type'] === 'STARTLIST'){
           this.buttonsStartlist.push(item);
@@ -104,23 +119,40 @@ export class ResultsComponent {
   }
 
 
-  getResult(key){
-   console.log(key)
+  getResult(key, item?){
+    if(item){
+      this.GridConfig = item["GridConfig"];
+      this.active(item);
+    }
+    console.log(key)
+    this.result = null;
     this.startList = null;
+    this.data = null;
+
     this.dataService.getResult(key.discipline, key.sport, key.gender, key.phase, key.heat, key.run).subscribe((data) => {
       this.result = data;
+      this.data = data;
       console.log(data, this.result)
       this.showError = false;
       this.applicationRef.tick();
     }, () => this.showError = true)
   }
 
-  getStartlist(key){
+  getStartlist(key, item?){
+    if(item){
+      this.GridConfig = item["GridConfig"];
+      this.active(item);
+    }
     console.log(key)
 
     this.result = null;
+    this.startList = null;
+    this.data = null;
+
     this.dataService.getStartlist(key.discipline, key.sport, key.gender, key.phase, key.heat, key.run).subscribe((data) => {
       this.startList = data;
+      this.data = data;
+
       // console.log(data.json())
       console.log(data, this.startList)
 
@@ -132,4 +164,15 @@ export class ResultsComponent {
   low(key){
     return key.toLowerCase();
   }
+
+  active(item){
+    for(let item of this.buttonsResults){
+      item.Active = false
+    }
+    for(let item of this.buttonsStartlist){
+      item.Active = false
+    }
+    item["Active"] = true;
+  }
+
 }

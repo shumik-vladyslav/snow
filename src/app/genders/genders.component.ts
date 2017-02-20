@@ -19,6 +19,62 @@ export class GendersComponent {
 
       dataService.headerText.next(Names[this.sport] + " " + Names[this.discipline]);
 
+      if(this.discipline === 'SS'){
+        this.leftMenu.data = [
+          {
+            name: "Qualification",
+            color: "blue",
+            genders: "M",
+            phase: "QUAL",
+            heat: "----",
+            run: "----"
+          },
+          {
+            name: "Semifinals",
+            color: "purple",
+            genders: "M",
+            phase: "SFNL",
+            heat: "----",
+            run: "----"
+          },
+          {
+            name: "Finals",
+            color: "red",
+            genders: "M",
+            phase: "QUAL",
+            heat: "----",
+            run: "----"
+          }
+        ];
+
+        this.rightMenu.data = [
+          {
+            name: "Qualification",
+            color: "green",
+            genders: "W",
+            phase: "QUAL",
+            heat: "----",
+            run: "----"
+          },
+          {
+            name: "Semifinals",
+            color: "bluers",
+            genders: "W",
+            phase: "SFNL",
+            heat: "----",
+            run: "----"
+          },
+          {
+            name: "Finals",
+            color: "orange",
+            genders: "W",
+            phase: "QUAL",
+            heat: "----",
+            run: "----"
+          }
+        ]
+      }
+
     });
   }
 

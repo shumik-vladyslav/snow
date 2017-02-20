@@ -1,11 +1,11 @@
 <ul style="padding-top: 81px" class="nav nav-tabs">
   <li *ngFor="let item of buttonsStartlist; let i = index">
-    <button *ngIf="item['Type'] === 'STARTLIST'" (click)="getStartlist(item.Key)">{{item.Text}}</button>
+    <button [ngStyle]="{'background-color': item.Active ? '#5ecccc' : ''}" *ngIf="item['Type'] === 'STARTLIST'" (click)="getStartlist(item.Key, item)">{{item.Text}}</button>
   </li>
 </ul>
 <ul class="nav nav-tabs">
   <li *ngFor="let item of buttonsResults; let i = index">
-    <button *ngIf="item['Type'] === 'RESULT'" (click)="getResult(item.Key)">{{item.Text}}</button>
+    <button  [ngStyle]="{'background-color': item.Active ? '#5ecccc' : ''}" [ngClass]="{'active': item.Active}" *ngIf="item['Type'] === 'RESULT'" (click)="getResult(item.Key, item)">{{item.Text}}</button>
   </li>
 </ul>
 
@@ -13,60 +13,66 @@
   No Data Available
 </div>
 
-<table *ngIf="result" class="table table-condensed table-striped">
+<!--<table *ngIf="result" class="table table-condensed table-striped">-->
+  <!--<thead>-->
+  <!--<tr>-->
+    <!--<th *ngFor="let key of resultOptions | keys">{{resultOptions[key]}}</th>-->
+  <!--</tr>-->
+  <!--</thead>-->
+  <!--<tbody>-->
+  <!--<tr *ngFor="let item of result">-->
+    <!--<td *ngFor="let key of resultOptions | keys">-->
+      <!--<span *ngIf="key !== 'NOC' && key !== 'Name' && key !== 'Results1' && key !== 'Results2' && key !== 'ColorCourse'">{{item[key]}}</span>-->
+      <!--<span *ngIf="key === 'ColorCourse1'">-->
+
+            <!--<svg *ngIf="item['ColorCourse'] === 'BLUE'">-->
+              <!--{{item['Result']}}-->
+            <!--</svg>-->
+
+      <!--</span>-->
+      <!--<span *ngIf="key === 'ColorCourse2'">-->
+
+            <!--&lt;!&ndash;<svg *ngIf="item['ColorCourse'] === 'BLUE'" width="50" height="50">&ndash;&gt;-->
+              <!--&lt;!&ndash;<rect x="0" y="0" width="20" height="20"&ndash;&gt;-->
+                    <!--&lt;!&ndash;style="fill:blue" />&ndash;&gt;-->
+            <!--&lt;!&ndash;</svg>&ndash;&gt;-->
+
+            <!--<svg *ngIf="item['ColorCourse'] === 'RED'">-->
+               <!--{{item['Result']}}-->
+            <!--</svg>-->
+      <!--</span>-->
+      <!--&lt;!&ndash;<span *ngIf="key === 'Results1' && item['Results']">&ndash;&gt;-->
+            <!--&lt;!&ndash;{{item["Results"][0].Result}}&ndash;&gt;-->
+          <!--&lt;!&ndash;</span>&ndash;&gt;-->
+      <!--&lt;!&ndash;<span *ngIf="key === 'Results2' && item['Results']">&ndash;&gt;-->
+            <!--&lt;!&ndash;{{item["Results"][1].Result}}&ndash;&gt;-->
+          <!--&lt;!&ndash;</span>&ndash;&gt;-->
+      <!--<span *ngIf="key === 'Name'">-->
+            <!--{{item['Surname']}} {{item[key]}}-->
+          <!--</span>-->
+      <!--<span *ngIf="key === 'NOC'">-->
+            <!--<img src="./../assets/{{low(item[key])}}.png" style="height: 25px;">   {{item[key]}}-->
+          <!--</span>-->
+    <!--</td>-->
+  <!--</tr>-->
+  <!--</tbody>-->
+<!--</table>-->
+
+<table *ngIf="data && GridConfig" class="table table-condensed table-striped">
   <thead>
   <tr>
-    <th *ngFor="let key of resultOptions | keys">{{resultOptions[key]}}</th>
+    <th *ngFor="let key of GridConfig | keys">{{GridConfig[key]}}</th>
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let item of result">
-    <td *ngFor="let key of resultOptions | keys">
-      <span *ngIf="key !== 'NOC' && key !== 'Name' && key !== 'Results1' && key !== 'Results2' && key !== 'ColorCourse'">{{item[key]}}</span>
-      <span *ngIf="key === 'ColorCourse'">
-
-            <svg *ngIf="item['ColorCourse'] === 'BLUE'" width="50" height="50">
-              <rect x="0" y="0" width="20" height="20"
-                    style="fill:blue" />
-            </svg>
-
-            <svg *ngIf="item['ColorCourse'] === 'RED'" width="50" height="50">
-              <rect x="0" y="0" width="20" height="20"
-                    style="fill:red" />
-            </svg>
-          </span>
-      <span *ngIf="key === 'Results1' && item['Results']">
-            {{item["Results"][0].Result}}
-          </span>
-      <span *ngIf="key === 'Results2' && item['Results']">
-            {{item["Results"][1].Result}}
-          </span>
-      <span *ngIf="key === 'Name'">
-            {{item['Surname']}} {{item[key]}}
-          </span>
-      <span *ngIf="key === 'NOC'">
-            <img src="./../assets/{{low(item[key])}}.png" style="height: 25px;">{{item[key]}}
-          </span>
-    </td>
-  </tr>
-  </tbody>
-</table>
-
-<table *ngIf="startList" class="table table-condensed table-striped">
-  <thead>
-  <tr>
-    <th *ngFor="let key of startListOptions | keys">{{startListOptions[key]}}</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let item of startList">
-    <td *ngFor="let key of startListOptions | keys">
+  <tr *ngFor="let item of data">
+    <td *ngFor="let key of GridConfig | keys">
       <span *ngIf="key !== 'NOC' && key !== 'Name'">{{item[key]}}</span>
       <span *ngIf="key === 'Name'">
             {{item['Surname']}} {{item[key]}}
           </span>
       <span *ngIf="key === 'NOC'">
-            <img src="./../assets/{{low(item[key])}}.png" style="height: 25px;"> {{item[key]}}
+            <img src="./../assets/{{low(item[key])}}.png" style="height: 25px;">   {{item[key]}}
           </span>
     </td>
   </tr>

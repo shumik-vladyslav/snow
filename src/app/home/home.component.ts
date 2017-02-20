@@ -38,7 +38,7 @@ export class HomeComponent {
       name: "Slope	Style",
       color: "green",
       sport: "SBD",
-      discipline: "SS-"
+      discipline: "SS"
     },
   ]};
 
@@ -55,7 +55,7 @@ export class HomeComponent {
         name: "Slope	Style",
         color: "orange",
         sport: "FRS",
-        discipline: "SS-"
+        discipline: "SS"
       }
     ]};
 

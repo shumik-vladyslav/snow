@@ -11,6 +11,7 @@ export let Names = {
   "SBX": "Snowboard	Cross",
   "Slope	Style":	"SS-",
   "SS-": "Slope	Style",
+  "SS": "Slope	Style",
   "Ski	Cross":	"SX-",
   "SX-": "Ski	Cross",
   "M": "Men",
