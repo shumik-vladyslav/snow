@@ -128,4 +128,8 @@ export class ResultsComponent {
       this.applicationRef.tick();
     }, () => this.showError = true)
   }
+
+  low(key){
+    return key.toLowerCase();
+  }
 }
