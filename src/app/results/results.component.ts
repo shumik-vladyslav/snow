@@ -52,6 +52,7 @@ export class ResultsComponent {
   run;
 
   data;
+  store;
 
   constructor(private route: ActivatedRoute, private router: Router, private dataService: DataService,
   private applicationRef:ApplicationRef ){
@@ -66,7 +67,11 @@ export class ResultsComponent {
       // this.title = Names[this.sport] + " : " + Names[this.discipline]
       dataService.headerText.next(Names[this.sport] + " " + Names[this.discipline] + " " + Names[this.gender]+ " - " + Names[this.phase]);
 
-    });
+
+      this.dataService.getStartlist(this.discipline, this.sport, this.gender, this.phase, this.heat, this.run).subscribe((data) => {
+        this.store = data;
+      })
+      });
 
     // this.getResult();
     // this.getStartlist();
