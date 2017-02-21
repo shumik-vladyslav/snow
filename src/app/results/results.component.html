@@ -9,7 +9,7 @@
   </li>
 </ul>
 
-<div class="container-fluid current-wrapper">
+<div *ngIf="current" class="container-fluid current-wrapper">
   <div class="container" style="font-weight: bold;">
     <div class="row">
       <div class="col-md-2 current">
@@ -18,46 +18,30 @@
       <div class="col-md-4 name">
         <div class="row">
           <div class="col-md-1">
-            <span>9</span>
+            <span>{{current.liveData.currentAthlete.BIB}}</span>
           </div>
           <div class="col-md-11 name">
-            <span>KROL Alexendra</span>
-            <img src="../../assets/ukr.png" alt="FLAG">
-            <span>URK</span>
+            <span>{{current.liveData.currentAthlete.Fullname}}</span>
+            <img src="../../assets/{{low(current.liveData.currentAthlete.NOC)}}.png" alt="FLAG">
+            <span>{{current.liveData.currentAthlete.NOC}}</span>
           </div>
         </div>
       </div>
       <div class="col-md-3 position">
         <div class="row">
-          <div class="col-md-2">
-            <span>J1</span><br>
-             <span>34</span>
-          </div>
-          <div class="col-md-2">
-            <span>J2</span><br>
-            <span>34</span>
-          </div>
-          <div class="col-md-2">
-            <span>J3</span><br>
-            <span>34</span>
-          </div>
-          <div class="col-md-2">
-            <span>J4</span><br>
-            <span>34</span>
-          </div>
-          <div class="col-md-2">
-            <span>J5</span><br>
-            <span>34</span>
+          <div *ngFor="let item of current.liveData.DetailScores" class="col-md-2">
+            <span>{{item.Judge}}</span><br>
+             <span>{{item.Score}}</span>
           </div>
         </div>
       </div>
       <div class="col-md-3 score">
         <div class="row">
           <div class="col-md-6">
-            <span>Score 53.92</span>
+            <span>Score {{current.liveData.Result}}</span>
           </div>
           <div class="col-md-6">
-            <span>Rank 1</span>
+            <span>Rank {{current.liveData.Rank}}</span>
           </div>
         </div>
       </div>

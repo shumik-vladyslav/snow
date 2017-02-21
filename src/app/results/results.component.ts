@@ -102,9 +102,21 @@ export class ResultsComponent {
 
     socket.on("current", (key) => {
       console.log(13,key);
+
+      if(key["competition"]['sport'] === this.sport &&
+        key["competition"]['discipline'] === this.discipline &&
+        key["competition"]['gender'] === this.gender &&
+        key["competition"]['phase'] === this.phase ){
+        this.current = null;
+        this.current = key;
+
+      }
+
     });
 
   }
+
+  current;
 
   buttonsResults = [];
   buttonsStartlist = [];

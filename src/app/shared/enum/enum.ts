@@ -17,5 +17,6 @@ export let Names = {
   "M": "Men",
   "W": "Ladies",
   "QUAL": "Qualification",
-  "FNL-": "Finals"
+  "FNL-": "Finals",
+  "SFNL": "Semifinals"
 };
