@@ -68,9 +68,9 @@ export class ResultsComponent {
       dataService.headerText.next(Names[this.sport] + " " + Names[this.discipline] + " " + Names[this.gender]+ " - " + Names[this.phase]);
 
 
-      this.dataService.getStartlist(this.discipline, this.sport, this.gender, this.phase, this.heat, this.run).subscribe((data) => {
-        this.store = data;
-      })
+      // this.dataService.getStartlist(this.discipline, this.sport, this.gender, this.phase, this.heat, this.run).subscribe((data) => {
+      //   this.store = data;
+      // })
       });
 
     // this.getResult();
@@ -88,7 +88,10 @@ export class ResultsComponent {
 
     socket.on("result", (key) => {
       console.log(13,key);
-      if(key['sport'] === this.sport)
+      if(key['sport'] === this.sport &&
+        key['discipline'] === this.discipline &&
+        key['gender'] === this.gender &&
+        key['phase'] === this.phase )
       if(key['Type'] === 'STARTLIST'){
         this.getStartlist(key);
       }else{
