@@ -1,602 +1,604 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12 topTable">
-      <div class="col-md-3">
-        <span>1/8 Finals</span>
-      </div>
-      <div class="col-md-3">
-        <span>Quarterfinals</span>
-      </div>
-      <div class="col-md-3">
-        <span>Semifinals</span>
-      </div>
-      <div class="col-md-3">
-        <span>Finals</span>
-      </div>
-    </div>
-    <div class="col-md-12 bodyTable">
-      <div class="col-md-3">
-        <div class="row">
-          <div class="col-md-12 headerGroupe">
-            <div class="row">
-              <div class="col-md-3">
-                <span>Bib</span>
-              </div>
-              <div class="col-md-6">
-                <span class="stage">EightFinal 1</span>
-              </div>
-              <div class="col-md-3">
-                <span>Rk</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 groupe">
-            <div *ngFor="let item of data[0]" class="row">
-              <div class="col-md-2">
-                <!--<span>{{item.Bib }}</span>-->
-                <button class="circleRed"></button>
-              </div>
-              <div class="col-md-6">
-                <span>{{ item.Name }} {{item.Surname}}</span>
-              </div>
-              <div class="col-md-1 flag">
-                <img src="../../assets/ukr.png" alt="FLAG">
-              </div>
-              <div class="col-md-2">
-                <span>{{ item.NOC }}</span>
-              </div>
-              <div class="col-md-1 rank">
-                <span>{{ item.Position }}</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-12 headerGroupe">
-            <div class="row">
-              <div class="col-md-3">
-                <span>Bib</span>
-              </div>
-              <div class="col-md-6">
-                <span class="stage">EightFinal 2</span>
-              </div>
-              <div class="col-md-3">
-                <span>Rk</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 groupe">
-            <div *ngFor="let item of data[0]" class="row">
-              <div class="col-md-2">
-                <!--<span>{{item.Bib }}</span>-->
-                <button class="circleGreen"></button>
-              </div>
-              <div class="col-md-6">
-                <span>{{ item.Name }} {{item.Surname}}</span>
-              </div>
-              <div class="col-md-1 flag">
-                <img src="../../assets/ukr.png" alt="FLAG">
-              </div>
-              <div class="col-md-2">
-                <span>{{ item.NOC }}</span>
-              </div>
-              <div class="col-md-1 rank">
-                <span>{{ item.Position }}</span>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-12 headerGroupe">
-            <div class="row">
-              <div class="col-md-3">
-                <span>Bib</span>
-              </div>
-              <div class="col-md-6">
-                <span class="stage">EightFinal 3</span>
-              </div>
-              <div class="col-md-3">
-                <span>Rk</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 groupe">
-            <div *ngFor="let item of data[0]" class="row">
-              <div class="col-md-2">
-                <!--<span>{{item.Bib }}</span>-->
-                <button class="circleBlue"></button>
-              </div>
-              <div class="col-md-6">
-                <span>{{ item.Name }} {{item.Surname}}</span>
-              </div>
-              <div class="col-md-1 flag">
-                <img src="../../assets/ukr.png" alt="FLAG">
-              </div>
-              <div class="col-md-2">
-                <span>{{ item.NOC }}</span>
-              </div>
-              <div class="col-md-1 rank">
-                <span>{{ item.Position }}</span>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-12 headerGroupe">
-            <div class="row">
-              <div class="col-md-3">
-                <span>Bib</span>
-              </div>
-              <div class="col-md-6">
-                <span class="stage">EightFinal 4</span>
-              </div>
-              <div class="col-md-3">
-                <span>Rk</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 groupe">
-            <div *ngFor="let item of data[0]" class="row">
-              <div class="col-md-2">
-                <!--<span>{{item.Bib }}</span>-->
-                <button class="circleYellow"></button>
-              </div>
-              <div class="col-md-6">
-                <span>{{ item.Name }} {{item.Surname}}</span>
-              </div>
-              <div class="col-md-1 flag">
-                <img src="../../assets/ukr.png" alt="FLAG">
-              </div>
-              <div class="col-md-2">
-                <span>{{ item.NOC }}</span>
-              </div>
-              <div class="col-md-1 rank">
-                <span>{{ item.Position }}</span>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-12 headerGroupe">
-            <div class="row">
-              <div class="col-md-3">
-                <span>Bib</span>
-              </div>
-              <div class="col-md-6">
-                <span class="stage">EightFinal 5</span>
-              </div>
-              <div class="col-md-3">
-                <span>Rk</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 groupe">
-            <div *ngFor="let item of data[0]" class="row">
-              <div class="col-md-2">
-                <!--<span>{{item.Bib }}</span>-->
-                <button class="circleRed"></button>
-              </div>
-              <div class="col-md-6">
-                <span>{{ item.Name }} {{item.Surname}}</span>
-              </div>
-              <div class="col-md-1 flag">
-                <img src="../../assets/ukr.png" alt="FLAG">
-              </div>
-              <div class="col-md-2">
-                <span>{{ item.NOC }}</span>
-              </div>
-              <div class="col-md-1 rank">
-                <span>{{ item.Position }}</span>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-12 headerGroupe">
-            <div class="row">
-              <div class="col-md-3">
-                <span>Bib</span>
-              </div>
-              <div class="col-md-6">
-                <span class="stage">EightFinal 6</span>
-              </div>
-              <div class="col-md-3">
-                <span>Rk</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 groupe">
-            <div *ngFor="let item of data[0]" class="row">
-              <div class="col-md-2">
-                <!--<span>{{item.Bib }}</span>-->
-                <button class="circleBlue"></button>
-              </div>
-              <div class="col-md-6">
-                <span>{{ item.Name }} {{item.Surname}}</span>
-              </div>
-              <div class="col-md-1 flag">
-                <img src="../../assets/ukr.png" alt="FLAG">
-              </div>
-              <div class="col-md-2">
-                <span>{{ item.NOC }}</span>
-              </div>
-              <div class="col-md-1 rank">
-                <span>{{ item.Position }}</span>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-12 headerGroupe">
-            <div class="row">
-              <div class="col-md-3">
-                <span>Bib</span>
-              </div>
-              <div class="col-md-6">
-                <span class="stage">EightFinal 7</span>
-              </div>
-              <div class="col-md-3">
-                <span>Rk</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 groupe">
-            <div *ngFor="let item of data[0]" class="row">
-              <div class="col-md-2">
-                <!--<span>{{item.Bib }}</span>-->
-                <button class="circleGreen"></button>
-              </div>
-              <div class="col-md-6">
-                <span>{{ item.Name }} {{item.Surname}}</span>
-              </div>
-              <div class="col-md-1 flag">
-                <img src="../../assets/ukr.png" alt="FLAG">
-              </div>
-              <div class="col-md-2">
-                <span>{{ item.NOC }}</span>
-              </div>
-              <div class="col-md-1 rank">
-                <span>{{ item.Position }}</span>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-12 headerGroupe">
-            <div class="row">
-              <div class="col-md-3">
-                <span>Bib</span>
-              </div>
-              <div class="col-md-6">
-                <span class="stage">EightFinal 8</span>
-              </div>
-              <div class="col-md-3">
-                <span>Rk</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 groupe">
-            <div *ngFor="let item of data[0]" class="row">
-              <div class="col-md-2">
-                <!--<span>{{item.Bib }}</span>-->
-                <button class="circleYellow"></button>
-              </div>
-              <div class="col-md-6">
-                <span>{{ item.Name }} {{item.Surname}}</span>
-              </div>
-              <div class="col-md-1 flag">
-                <img src="../../assets/ukr.png" alt="FLAG">
-              </div>
-              <div class="col-md-2">
-                <span>{{ item.NOC }}</span>
-              </div>
-              <div class="col-md-1 rank">
-                <span>{{ item.Position }}</span>
-              </div>
-            </div>
-          </div>
-
+<div class="content-scroll container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 topTable">
+        <div class="col-md-3">
+          <span>1/8 Finals</span>
+        </div>
+        <div class="col-md-3">
+          <span>Quarterfinals</span>
+        </div>
+        <div class="col-md-3">
+          <span>Semifinals</span>
+        </div>
+        <div class="col-md-3">
+          <span>Finals</span>
         </div>
       </div>
+      <div class="col-md-12 bodyTable">
+        <div class="col-md-3">
+          <div class="row">
+            <div class="col-md-12 headerGroupe">
+              <div class="row">
+                <div class="col-md-3">
+                  <span>Bib</span>
+                </div>
+                <div class="col-md-6">
+                  <span class="stage">EightFinal 1</span>
+                </div>
+                <div class="col-md-3">
+                  <span>Rk</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 groupe">
+              <div *ngFor="let item of data[0]" class="row">
+                <div class="col-md-2">
+                  <!--<span>{{item.Bib }}</span>-->
+                  <button class="circleRed"></button>
+                </div>
+                <div class="col-md-6">
+                  <span>{{ item.Name }} {{item.Surname}}</span>
+                </div>
+                <div class="col-md-1 flag">
+                  <img src="../../assets/ukr.png" alt="FLAG">
+                </div>
+                <div class="col-md-2">
+                  <span>{{ item.NOC }}</span>
+                </div>
+                <div class="col-md-1 rank">
+                  <span>{{ item.Position }}</span>
+                </div>
+              </div>
+            </div>
 
-      <!--QUARTERFINALS START-->
-      <div class="col-md-3 quarterfinals">
-        <div [ngStyle]="{'margin-top': margin + 'px'}" class="col-md-12 wrapperGroup">
-          <div class="col-md-12 headerGroupe">
-            <div class="row">
-              <div class="col-md-3">
-                <span>Bib</span>
+            <div class="col-md-12 headerGroupe">
+              <div class="row">
+                <div class="col-md-3">
+                  <span>Bib</span>
+                </div>
+                <div class="col-md-6">
+                  <span class="stage">EightFinal 2</span>
+                </div>
+                <div class="col-md-3">
+                  <span>Rk</span>
+                </div>
               </div>
-              <div class="col-md-6">
-                <span class="stage">QuarterFinal 9</span>
+            </div>
+            <div class="col-md-12 groupe">
+              <div *ngFor="let item of data[0]" class="row">
+                <div class="col-md-2">
+                  <!--<span>{{item.Bib }}</span>-->
+                  <button class="circleGreen"></button>
+                </div>
+                <div class="col-md-6">
+                  <span>{{ item.Name }} {{item.Surname}}</span>
+                </div>
+                <div class="col-md-1 flag">
+                  <img src="../../assets/ukr.png" alt="FLAG">
+                </div>
+                <div class="col-md-2">
+                  <span>{{ item.NOC }}</span>
+                </div>
+                <div class="col-md-1 rank">
+                  <span>{{ item.Position }}</span>
+                </div>
               </div>
-              <div class="col-md-3">
-                <span>Rk</span>
+            </div>
+
+
+            <div class="col-md-12 headerGroupe">
+              <div class="row">
+                <div class="col-md-3">
+                  <span>Bib</span>
+                </div>
+                <div class="col-md-6">
+                  <span class="stage">EightFinal 3</span>
+                </div>
+                <div class="col-md-3">
+                  <span>Rk</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 groupe">
+              <div *ngFor="let item of data[0]" class="row">
+                <div class="col-md-2">
+                  <!--<span>{{item.Bib }}</span>-->
+                  <button class="circleBlue"></button>
+                </div>
+                <div class="col-md-6">
+                  <span>{{ item.Name }} {{item.Surname}}</span>
+                </div>
+                <div class="col-md-1 flag">
+                  <img src="../../assets/ukr.png" alt="FLAG">
+                </div>
+                <div class="col-md-2">
+                  <span>{{ item.NOC }}</span>
+                </div>
+                <div class="col-md-1 rank">
+                  <span>{{ item.Position }}</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-12 headerGroupe">
+              <div class="row">
+                <div class="col-md-3">
+                  <span>Bib</span>
+                </div>
+                <div class="col-md-6">
+                  <span class="stage">EightFinal 4</span>
+                </div>
+                <div class="col-md-3">
+                  <span>Rk</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 groupe">
+              <div *ngFor="let item of data[0]" class="row">
+                <div class="col-md-2">
+                  <!--<span>{{item.Bib }}</span>-->
+                  <button class="circleYellow"></button>
+                </div>
+                <div class="col-md-6">
+                  <span>{{ item.Name }} {{item.Surname}}</span>
+                </div>
+                <div class="col-md-1 flag">
+                  <img src="../../assets/ukr.png" alt="FLAG">
+                </div>
+                <div class="col-md-2">
+                  <span>{{ item.NOC }}</span>
+                </div>
+                <div class="col-md-1 rank">
+                  <span>{{ item.Position }}</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-12 headerGroupe">
+              <div class="row">
+                <div class="col-md-3">
+                  <span>Bib</span>
+                </div>
+                <div class="col-md-6">
+                  <span class="stage">EightFinal 5</span>
+                </div>
+                <div class="col-md-3">
+                  <span>Rk</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 groupe">
+              <div *ngFor="let item of data[0]" class="row">
+                <div class="col-md-2">
+                  <!--<span>{{item.Bib }}</span>-->
+                  <button class="circleRed"></button>
+                </div>
+                <div class="col-md-6">
+                  <span>{{ item.Name }} {{item.Surname}}</span>
+                </div>
+                <div class="col-md-1 flag">
+                  <img src="../../assets/ukr.png" alt="FLAG">
+                </div>
+                <div class="col-md-2">
+                  <span>{{ item.NOC }}</span>
+                </div>
+                <div class="col-md-1 rank">
+                  <span>{{ item.Position }}</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-12 headerGroupe">
+              <div class="row">
+                <div class="col-md-3">
+                  <span>Bib</span>
+                </div>
+                <div class="col-md-6">
+                  <span class="stage">EightFinal 6</span>
+                </div>
+                <div class="col-md-3">
+                  <span>Rk</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 groupe">
+              <div *ngFor="let item of data[0]" class="row">
+                <div class="col-md-2">
+                  <!--<span>{{item.Bib }}</span>-->
+                  <button class="circleBlue"></button>
+                </div>
+                <div class="col-md-6">
+                  <span>{{ item.Name }} {{item.Surname}}</span>
+                </div>
+                <div class="col-md-1 flag">
+                  <img src="../../assets/ukr.png" alt="FLAG">
+                </div>
+                <div class="col-md-2">
+                  <span>{{ item.NOC }}</span>
+                </div>
+                <div class="col-md-1 rank">
+                  <span>{{ item.Position }}</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-12 headerGroupe">
+              <div class="row">
+                <div class="col-md-3">
+                  <span>Bib</span>
+                </div>
+                <div class="col-md-6">
+                  <span class="stage">EightFinal 7</span>
+                </div>
+                <div class="col-md-3">
+                  <span>Rk</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 groupe">
+              <div *ngFor="let item of data[0]" class="row">
+                <div class="col-md-2">
+                  <!--<span>{{item.Bib }}</span>-->
+                  <button class="circleGreen"></button>
+                </div>
+                <div class="col-md-6">
+                  <span>{{ item.Name }} {{item.Surname}}</span>
+                </div>
+                <div class="col-md-1 flag">
+                  <img src="../../assets/ukr.png" alt="FLAG">
+                </div>
+                <div class="col-md-2">
+                  <span>{{ item.NOC }}</span>
+                </div>
+                <div class="col-md-1 rank">
+                  <span>{{ item.Position }}</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-12 headerGroupe">
+              <div class="row">
+                <div class="col-md-3">
+                  <span>Bib</span>
+                </div>
+                <div class="col-md-6">
+                  <span class="stage">EightFinal 8</span>
+                </div>
+                <div class="col-md-3">
+                  <span>Rk</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 groupe">
+              <div *ngFor="let item of data[0]" class="row">
+                <div class="col-md-2">
+                  <!--<span>{{item.Bib }}</span>-->
+                  <button class="circleYellow"></button>
+                </div>
+                <div class="col-md-6">
+                  <span>{{ item.Name }} {{item.Surname}}</span>
+                </div>
+                <div class="col-md-1 flag">
+                  <img src="../../assets/ukr.png" alt="FLAG">
+                </div>
+                <div class="col-md-2">
+                  <span>{{ item.NOC }}</span>
+                </div>
+                <div class="col-md-1 rank">
+                  <span>{{ item.Position }}</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!--QUARTERFINALS START-->
+        <div class="col-md-3 quarterfinals">
+          <div [ngStyle]="{'margin-top': margin + 'px'}" class="col-md-12 wrapperGroup">
+            <div class="col-md-12 headerGroupe">
+              <div class="row">
+                <div class="col-md-3">
+                  <span>Bib</span>
+                </div>
+                <div class="col-md-6">
+                  <span class="stage">QuarterFinal 9</span>
+                </div>
+                <div class="col-md-3">
+                  <span>Rk</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 groupe">
+              <div *ngFor="let item of data[0]" class="row">
+                <div class="col-md-2">
+                  <!--<span>{{item.Bib }}</span>-->
+                  <button class="circleYellow"></button>
+                </div>
+                <div class="col-md-6">
+                  <span>{{ item.Name }} {{item.Surname}}</span>
+                </div>
+                <div class="col-md-1 flag">
+                  <img src="../../assets/ukr.png" alt="FLAG">
+                </div>
+                <div class="col-md-2">
+                  <span>{{ item.NOC }}</span>
+                </div>
+                <div class="col-md-1 rank">
+                  <span>{{ item.Position }}</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-12 groupe">
-            <div *ngFor="let item of data[0]" class="row">
-              <div class="col-md-2">
-                <!--<span>{{item.Bib }}</span>-->
-                <button class="circleYellow"></button>
+
+
+          <div [ngStyle]="{'margin-top': margin + 92 + 'px'}" class="col-md-12 wrapperGroup">
+            <div class="col-md-12 headerGroupe">
+              <div class="row">
+                <div class="col-md-3">
+                  <span>Bib</span>
+                </div>
+                <div class="col-md-6">
+                  <span class="stage">QuarterFinal 10</span>
+                </div>
+                <div class="col-md-3">
+                  <span>Rk</span>
+                </div>
               </div>
-              <div class="col-md-6">
-                <span>{{ item.Name }} {{item.Surname}}</span>
+            </div>
+            <div class="col-md-12 groupe">
+              <div *ngFor="let item of data[0]" class="row">
+                <div class="col-md-2">
+                  <!--<span>{{item.Bib }}</span>-->
+                  <button class="circleYellow"></button>
+                </div>
+                <div class="col-md-6">
+                  <span>{{ item.Name }} {{item.Surname}}</span>
+                </div>
+                <div class="col-md-1 flag">
+                  <img src="../../assets/ukr.png" alt="FLAG">
+                </div>
+                <div class="col-md-2">
+                  <span>{{ item.NOC }}</span>
+                </div>
+                <div class="col-md-1 rank">
+                  <span>{{ item.Position }}</span>
+                </div>
               </div>
-              <div class="col-md-1 flag">
-                <img src="../../assets/ukr.png" alt="FLAG">
+            </div>
+          </div>
+
+          <div [ngStyle]="{'margin-top': margin + 92 + 'px'}" class="col-md-12 wrapperGroup">
+            <div class="col-md-12 headerGroupe">
+              <div class="row">
+                <div class="col-md-3">
+                  <span>Bib</span>
+                </div>
+                <div class="col-md-6">
+                  <span class="stage">QuarterFinal 11</span>
+                </div>
+                <div class="col-md-3">
+                  <span>Rk</span>
+                </div>
               </div>
-              <div class="col-md-2">
-                <span>{{ item.NOC }}</span>
+            </div>
+            <div class="col-md-12 groupe">
+              <div *ngFor="let item of data[0]" class="row">
+                <div class="col-md-2">
+                  <!--<span>{{item.Bib }}</span>-->
+                  <button class="circleYellow"></button>
+                </div>
+                <div class="col-md-6">
+                  <span>{{ item.Name }} {{item.Surname}}</span>
+                </div>
+                <div class="col-md-1 flag">
+                  <img src="../../assets/ukr.png" alt="FLAG">
+                </div>
+                <div class="col-md-2">
+                  <span>{{ item.NOC }}</span>
+                </div>
+                <div class="col-md-1 rank">
+                  <span>{{ item.Position }}</span>
+                </div>
               </div>
-              <div class="col-md-1 rank">
-                <span>{{ item.Position }}</span>
+            </div>
+          </div>
+
+
+          <div [ngStyle]="{'margin-top': margin + 92 + 'px'}" class="col-md-12 wrapperGroup">
+            <div class="col-md-12 headerGroupe">
+              <div class="row">
+                <div class="col-md-3">
+                  <span>Bib</span>
+                </div>
+                <div class="col-md-6">
+                  <span class="stage">QuarterFinal 12</span>
+                </div>
+                <div class="col-md-3">
+                  <span>Rk</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 groupe">
+              <div *ngFor="let item of data[0]" class="row">
+                <div class="col-md-2">
+                  <!--<span>{{item.Bib }}</span>-->
+                  <button class="circleYellow"></button>
+                </div>
+                <div class="col-md-6">
+                  <span>{{ item.Name }} {{item.Surname}}</span>
+                </div>
+                <div class="col-md-1 flag">
+                  <img src="../../assets/ukr.png" alt="FLAG">
+                </div>
+                <div class="col-md-2">
+                  <span>{{ item.NOC }}</span>
+                </div>
+                <div class="col-md-1 rank">
+                  <span>{{ item.Position }}</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
+        <!--QUARTERFINALS END-->
 
-        <div [ngStyle]="{'margin-top': margin + 92 + 'px'}" class="col-md-12 wrapperGroup">
-          <div class="col-md-12 headerGroupe">
-            <div class="row">
-              <div class="col-md-3">
-                <span>Bib</span>
+        <!--SEMIFINALS START-->
+        <div class="col-md-3 semifinals">
+          <div [ngStyle]="{'margin-top': margin + 152 + marginSemi  + 'px'}" class="col-md-12 wrapperGroup">
+            <div class="col-md-12 headerGroupe">
+              <div class="row">
+                <div class="col-md-3">
+                  <span>Bib</span>
+                </div>
+                <div class="col-md-6">
+                  <span class="stage">SemiFinal 13</span>
+                </div>
+                <div class="col-md-3">
+                  <span>Rk</span>
+                </div>
               </div>
-              <div class="col-md-6">
-                <span class="stage">QuarterFinal 10</span>
-              </div>
-              <div class="col-md-3">
-                <span>Rk</span>
+            </div>
+            <div class="col-md-12 groupe">
+              <div *ngFor="let item of data[0]" class="row">
+                <div class="col-md-2">
+                  <!--<span>{{item.Bib }}</span>-->
+                  <button class="circleYellow"></button>
+                </div>
+                <div class="col-md-6">
+                  <span>{{ item.Name }} {{item.Surname}}</span>
+                </div>
+                <div class="col-md-1 flag">
+                  <img src="../../assets/ukr.png" alt="FLAG">
+                </div>
+                <div class="col-md-2">
+                  <span>{{ item.NOC }}</span>
+                </div>
+                <div class="col-md-1 rank">
+                  <span>{{ item.Position }}</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-12 groupe">
-            <div *ngFor="let item of data[0]" class="row">
-              <div class="col-md-2">
-                <!--<span>{{item.Bib }}</span>-->
-                <button class="circleYellow"></button>
+
+
+          <div [ngStyle]="{'margin-top': margin + 464 + marginSemi - fixMargin + 'px'}" class="col-md-12 wrapperGroup">
+            <div class="col-md-12 headerGroupe">
+              <div class="row">
+                <div class="col-md-3">
+                  <span>Bib</span>
+                </div>
+                <div class="col-md-6">
+                  <span class="stage">SemiFinal 14</span>
+                </div>
+                <div class="col-md-3">
+                  <span>Rk</span>
+                </div>
               </div>
-              <div class="col-md-6">
-                <span>{{ item.Name }} {{item.Surname}}</span>
-              </div>
-              <div class="col-md-1 flag">
-                <img src="../../assets/ukr.png" alt="FLAG">
-              </div>
-              <div class="col-md-2">
-                <span>{{ item.NOC }}</span>
-              </div>
-              <div class="col-md-1 rank">
-                <span>{{ item.Position }}</span>
+            </div>
+            <div class="col-md-12 groupe">
+              <div *ngFor="let item of data[0]" class="row">
+                <div class="col-md-2">
+                  <!--<span>{{item.Bib }}</span>-->
+                  <button class="circleYellow"></button>
+                </div>
+                <div class="col-md-6">
+                  <span>{{ item.Name }} {{item.Surname}}</span>
+                </div>
+                <div class="col-md-1 flag">
+                  <img src="../../assets/ukr.png" alt="FLAG">
+                </div>
+                <div class="col-md-2">
+                  <span>{{ item.NOC }}</span>
+                </div>
+                <div class="col-md-1 rank">
+                  <span>{{ item.Position }}</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <!--SEMIFINALS END-->
 
-        <div [ngStyle]="{'margin-top': margin + 92 + 'px'}" class="col-md-12 wrapperGroup">
-          <div class="col-md-12 headerGroupe">
-            <div class="row">
-              <div class="col-md-3">
-                <span>Bib</span>
+
+        <!--FINALS START-->
+        <div class="col-md-3 finals">
+          <div [ngStyle]="{'margin-top': margin + 425 + marginSemi - fixMargin + 'px'}" class="col-md-12 wrapperGroup">
+            <div class="col-md-12 headerGroupe">
+              <div class="row">
+                <div class="col-md-3">
+                  <span>Bib</span>
+                </div>
+                <div class="col-md-6">
+                  <span class="stage">Small Final 15</span>
+                </div>
+                <div class="col-md-3">
+                  <span>Rk</span>
+                </div>
               </div>
-              <div class="col-md-6">
-                <span class="stage">QuarterFinal 11</span>
-              </div>
-              <div class="col-md-3">
-                <span>Rk</span>
+            </div>
+            <div class="col-md-12 groupe">
+              <div *ngFor="let item of data[0]" class="row">
+                <div class="col-md-2">
+                  <!--<span>{{item.Bib }}</span>-->
+                  <button class="circleYellow"></button>
+                </div>
+                <div class="col-md-6">
+                  <span>{{ item.Name }} {{item.Surname}}</span>
+                </div>
+                <div class="col-md-1 flag">
+                  <img src="../../assets/ukr.png" alt="FLAG">
+                </div>
+                <div class="col-md-2">
+                  <span>{{ item.NOC }}</span>
+                </div>
+                <div class="col-md-1 rank">
+                  <span>{{ item.Position }}</span>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-12 groupe">
-            <div *ngFor="let item of data[0]" class="row">
-              <div class="col-md-2">
-                <!--<span>{{item.Bib }}</span>-->
-                <button class="circleYellow"></button>
-              </div>
-              <div class="col-md-6">
-                <span>{{ item.Name }} {{item.Surname}}</span>
-              </div>
-              <div class="col-md-1 flag">
-                <img src="../../assets/ukr.png" alt="FLAG">
-              </div>
-              <div class="col-md-2">
-                <span>{{ item.NOC }}</span>
-              </div>
-              <div class="col-md-1 rank">
-                <span>{{ item.Position }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
 
 
-        <div [ngStyle]="{'margin-top': margin + 92 + 'px'}" class="col-md-12 wrapperGroup">
-          <div class="col-md-12 headerGroupe">
-            <div class="row">
-              <div class="col-md-3">
-                <span>Bib</span>
-              </div>
-              <div class="col-md-6">
-                <span class="stage">QuarterFinal 12</span>
-              </div>
-              <div class="col-md-3">
-                <span>Rk</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 groupe">
-            <div *ngFor="let item of data[0]" class="row">
-              <div class="col-md-2">
-                <!--<span>{{item.Bib }}</span>-->
-                <button class="circleYellow"></button>
-              </div>
-              <div class="col-md-6">
-                <span>{{ item.Name }} {{item.Surname}}</span>
-              </div>
-              <div class="col-md-1 flag">
-                <img src="../../assets/ukr.png" alt="FLAG">
-              </div>
-              <div class="col-md-2">
-                <span>{{ item.NOC }}</span>
-              </div>
-              <div class="col-md-1 rank">
-                <span>{{ item.Position }}</span>
+          <div [ngStyle]="{'margin-top': margin - 36 + 'px'}" class="col-md-12 wrapperGroup">
+            <div class="col-md-12 headerGroupe">
+              <div class="row">
+                <div class="col-md-3">
+                  <span>Bib</span>
+                </div>
+                <div class="col-md-6">
+                  <span class="stage">Big Final 16</span>
+                </div>
+                <div class="col-md-3">
+                  <span>Rk</span>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <!--QUARTERFINALS END-->
-
-      <!--SEMIFINALS START-->
-      <div class="col-md-3 semifinals">
-        <div [ngStyle]="{'margin-top': margin + 152 + marginSemi  + 'px'}" class="col-md-12 wrapperGroup">
-          <div class="col-md-12 headerGroupe">
-            <div class="row">
-              <div class="col-md-3">
-                <span>Bib</span>
-              </div>
-              <div class="col-md-6">
-                <span class="stage">SemiFinal 13</span>
-              </div>
-              <div class="col-md-3">
-                <span>Rk</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 groupe">
-            <div *ngFor="let item of data[0]" class="row">
-              <div class="col-md-2">
-                <!--<span>{{item.Bib }}</span>-->
-                <button class="circleYellow"></button>
-              </div>
-              <div class="col-md-6">
-                <span>{{ item.Name }} {{item.Surname}}</span>
-              </div>
-              <div class="col-md-1 flag">
-                <img src="../../assets/ukr.png" alt="FLAG">
-              </div>
-              <div class="col-md-2">
-                <span>{{ item.NOC }}</span>
-              </div>
-              <div class="col-md-1 rank">
-                <span>{{ item.Position }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div [ngStyle]="{'margin-top': margin + 464 + marginSemi - fixMargin + 'px'}" class="col-md-12 wrapperGroup">
-          <div class="col-md-12 headerGroupe">
-            <div class="row">
-              <div class="col-md-3">
-                <span>Bib</span>
-              </div>
-              <div class="col-md-6">
-                <span class="stage">SemiFinal 14</span>
-              </div>
-              <div class="col-md-3">
-                <span>Rk</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 groupe">
-            <div *ngFor="let item of data[0]" class="row">
-              <div class="col-md-2">
-                <!--<span>{{item.Bib }}</span>-->
-                <button class="circleYellow"></button>
-              </div>
-              <div class="col-md-6">
-                <span>{{ item.Name }} {{item.Surname}}</span>
-              </div>
-              <div class="col-md-1 flag">
-                <img src="../../assets/ukr.png" alt="FLAG">
-              </div>
-              <div class="col-md-2">
-                <span>{{ item.NOC }}</span>
-              </div>
-              <div class="col-md-1 rank">
-                <span>{{ item.Position }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--SEMIFINALS END-->
-
-
-      <!--FINALS START-->
-      <div class="col-md-3 finals">
-        <div [ngStyle]="{'margin-top': margin + 425 + marginSemi - fixMargin + 'px'}" class="col-md-12 wrapperGroup">
-          <div class="col-md-12 headerGroupe">
-            <div class="row">
-              <div class="col-md-3">
-                <span>Bib</span>
-              </div>
-              <div class="col-md-6">
-                <span class="stage">Small Final 15</span>
-              </div>
-              <div class="col-md-3">
-                <span>Rk</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 groupe">
-            <div *ngFor="let item of data[0]" class="row">
-              <div class="col-md-2">
-                <!--<span>{{item.Bib }}</span>-->
-                <button class="circleYellow"></button>
-              </div>
-              <div class="col-md-6">
-                <span>{{ item.Name }} {{item.Surname}}</span>
-              </div>
-              <div class="col-md-1 flag">
-                <img src="../../assets/ukr.png" alt="FLAG">
-              </div>
-              <div class="col-md-2">
-                <span>{{ item.NOC }}</span>
-              </div>
-              <div class="col-md-1 rank">
-                <span>{{ item.Position }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div [ngStyle]="{'margin-top': margin - 36 + 'px'}" class="col-md-12 wrapperGroup">
-          <div class="col-md-12 headerGroupe">
-            <div class="row">
-              <div class="col-md-3">
-                <span>Bib</span>
-              </div>
-              <div class="col-md-6">
-                <span class="stage">Big Final 16</span>
-              </div>
-              <div class="col-md-3">
-                <span>Rk</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 groupe">
-            <div *ngFor="let item of data[0]" class="row">
-              <div class="col-md-2">
-                <!--<span>{{item.Bib }}</span>-->
-                <button class="circleYellow"></button>
-              </div>
-              <div class="col-md-6">
-                <span>{{ item.Name }} {{item.Surname}}</span>
-              </div>
-              <div class="col-md-1 flag">
-                <img src="../../assets/ukr.png" alt="FLAG">
-              </div>
-              <div class="col-md-2">
-                <span>{{ item.NOC }}</span>
-              </div>
-              <div class="col-md-1 rank">
-                <span>{{ item.Position }}</span>
+            <div class="col-md-12 groupe">
+              <div *ngFor="let item of data[0]" class="row">
+                <div class="col-md-2">
+                  <!--<span>{{item.Bib }}</span>-->
+                  <button class="circleYellow"></button>
+                </div>
+                <div class="col-md-6">
+                  <span>{{ item.Name }} {{item.Surname}}</span>
+                </div>
+                <div class="col-md-1 flag">
+                  <img src="../../assets/ukr.png" alt="FLAG">
+                </div>
+                <div class="col-md-2">
+                  <span>{{ item.NOC }}</span>
+                </div>
+                <div class="col-md-1 rank">
+                  <span>{{ item.Position }}</span>
+                </div>
               </div>
             </div>
           </div>
@@ -604,4 +606,5 @@
       </div>
     </div>
   </div>
+
 </div>

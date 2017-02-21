@@ -1,4 +1,4 @@
-<ul style="padding-top: 81px" class="nav nav-tabs">
+<ul style="padding-top: 88px" class="nav nav-tabs">
   <li *ngFor="let item of buttonsStartlist; let i = index">
     <button [ngStyle]="{'background-color': item.Active ? '#5ecccc' : ''}" *ngIf="item['Type'] === 'STARTLIST'" (click)="getStartlist(item.Key, item)">{{item.Text}}</button>
   </li>
