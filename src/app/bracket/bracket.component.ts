@@ -54,16 +54,19 @@ export class BracketComponent {
       }
 
       if(this.bracket['8FNL']['Heat'][0]['Competitor'].length === 2){
-        this.margin = 30;
+        this.margin = 20;
         this.marginSemi = 15;
-        this.fixMargin = 0
+        this.fixMargin = 0;
+        this.fixMarginDuo = 40;
+
       }
     })
   }
-
+  surNameLngth = 9;
   fixMargin = 63;
   margin = 63;
   marginSemi = 0;
+  fixMarginDuo = 0;
   data = [[
     {
       Position: "1",
@@ -89,30 +92,7 @@ export class BracketComponent {
       Birthdate: "1994-07-08",
       Bib: "1 R"
     },
-    {
-      Position: "3",
-      Result: "4",
-      Color: "BLUE",
-      Code: "9150143",
-      Name: "Mark",
-      Surname: "BOHUNEK",
-      Fullname: "BOHUNEK Petr",
-      NOC: "CZE",
-      Birthdate: "1991-05-01",
-      Bib: "32 Y"
-    },
-    {
-      Position: "4",
-      Result: "2",
-      Color: "YELLOW",
-      Code: "1774911",
-      Name: "Timur",
-      Surname: "GUBAEV",
-      Fullname: "GUBAEV Timur",
-      NOC: "KGZ",
-      Birthdate: "1992-05-10",
-      Bib: "17 BI"
-    },
+
 
 
 

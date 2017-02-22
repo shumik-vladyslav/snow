@@ -43,7 +43,8 @@
                   <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
-                  <span>{{ item.Name }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length > surNameLngth">{{ item.Name.charAt(0) + '.' }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length <= surNameLngth">{{ item.Name}} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
                   <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
@@ -82,7 +83,8 @@
                   <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
-                  <span>{{ item.Name }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length > surNameLngth">{{ item.Name.charAt(0) + '.' }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length <= surNameLngth">{{ item.Name}} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
                   <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
@@ -122,7 +124,8 @@
                   <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
-                  <span>{{ item.Name }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length > surNameLngth">{{ item.Name.charAt(0) + '.' }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length <= surNameLngth">{{ item.Name}} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
                   <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
@@ -161,7 +164,8 @@
                   <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
-                  <span>{{ item.Name }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length > surNameLngth">{{ item.Name.charAt(0) + '.' }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length <= surNameLngth">{{ item.Name}} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
                   <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
@@ -201,7 +205,8 @@
                   <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
-                  <span>{{ item.Name }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length > surNameLngth">{{ item.Name.charAt(0) + '.' }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length <= surNameLngth">{{ item.Name}} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
                   <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
@@ -241,7 +246,8 @@
                   <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
-                  <span>{{ item.Name }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length > surNameLngth">{{ item.Name.charAt(0) + '.' }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length <= surNameLngth">{{ item.Name}} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
                   <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
@@ -281,7 +287,8 @@
                   <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
-                  <span>{{ item.Name }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length > surNameLngth">{{ item.Name.charAt(0) + '.' }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length <= surNameLngth">{{ item.Name}} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
                   <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
@@ -320,7 +327,8 @@
                   <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
-                  <span>{{ item.Name }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length > surNameLngth">{{ item.Name.charAt(0) + '.' }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length <= surNameLngth">{{ item.Name}} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
                   <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
@@ -339,7 +347,7 @@
 
         <!--QUARTERFINALS START-->
         <div *ngIf="bracket['QFNL']" class="col-md-3 quarterfinals">
-          <div [ngStyle]="{'margin-top': margin + 'px'}" class="col-md-12 wrapperGroup">
+          <div [ngStyle]="{'margin-top': margin + fixMarginDuo / 2 + 'px'}" class="col-md-12 wrapperGroup">
             <div class="col-md-12 headerGroupe">
               <div class="row">
                 <div class="col-md-3">
@@ -364,7 +372,8 @@
                   <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
-                  <span>{{ item.Name }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length > surNameLngth">{{ item.Name.charAt(0) + '.' }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length <= surNameLngth">{{ item.Name}} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
                   <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
@@ -380,7 +389,7 @@
           </div>
 
 
-          <div [ngStyle]="{'margin-top': margin + 92 + 'px'}" class="col-md-12 wrapperGroup">
+          <div [ngStyle]="{'margin-top': margin + 92 - fixMarginDuo * 0.75 + 'px'}" class="col-md-12 wrapperGroup">
             <div class="col-md-12 headerGroupe">
               <div class="row">
                 <div class="col-md-3">
@@ -405,7 +414,8 @@
                   <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
-                  <span>{{ item.Name }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length > surNameLngth">{{ item.Name.charAt(0) + '.' }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length <= surNameLngth">{{ item.Name}} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
                   <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
@@ -420,7 +430,7 @@
             </div>
           </div>
 
-          <div [ngStyle]="{'margin-top': margin + 92 + 'px'}" class="col-md-12 wrapperGroup">
+          <div [ngStyle]="{'margin-top': margin + 92 - fixMarginDuo * 0.5 + 'px'}" class="col-md-12 wrapperGroup">
             <div class="col-md-12 headerGroupe">
               <div class="row">
                 <div class="col-md-3">
@@ -445,7 +455,8 @@
                   <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
-                  <span>{{ item.Name }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length > surNameLngth">{{ item.Name.charAt(0) + '.' }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length <= surNameLngth">{{ item.Name}} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
                   <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
@@ -461,7 +472,7 @@
           </div>
 
 
-          <div [ngStyle]="{'margin-top': margin + 92 + 'px'}" class="col-md-12 wrapperGroup">
+          <div [ngStyle]="{'margin-top': margin + 92 - fixMarginDuo * 0.7 + 'px'}" class="col-md-12 wrapperGroup">
             <div class="col-md-12 headerGroupe">
               <div class="row">
                 <div class="col-md-3">
@@ -486,7 +497,8 @@
                   <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
-                  <span>{{ item.Name }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length > surNameLngth">{{ item.Name.charAt(0) + '.' }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length <= surNameLngth">{{ item.Name}} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
                   <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
@@ -506,7 +518,7 @@
 
         <!--SEMIFINALS START-->
         <div *ngIf="bracket['SFNL']" class="col-md-3 semifinals">
-          <div [ngStyle]="{'margin-top': margin + 152 + marginSemi  + 'px'}" class="col-md-12 wrapperGroup">
+          <div [ngStyle]="{'margin-top': margin + 152 + marginSemi - fixMarginDuo * 1.5  + 'px'}" class="col-md-12 wrapperGroup">
             <div class="col-md-12 headerGroupe">
               <div class="row">
                 <div class="col-md-3">
@@ -531,7 +543,8 @@
                   <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
-                  <span>{{ item.Name }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length > surNameLngth">{{ item.Name.charAt(0) + '.' }} {{item.Surname}}</span>
+                  <span *ngIf="item.Surname.length <= surNameLngth">{{ item.Name}} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
                   <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
@@ -547,7 +560,7 @@
           </div>
 
 
-          <div [ngStyle]="{'margin-top': margin + 464 + marginSemi - fixMargin + 'px'}" class="col-md-12 wrapperGroup">
+          <div [ngStyle]="{'margin-top': margin + 464 + marginSemi - fixMargin - fixMarginDuo * 6 + 'px'}" class="col-md-12 wrapperGroup">
             <div class="col-md-12 headerGroupe">
               <div class="row">
                 <div class="col-md-3">
@@ -592,7 +605,7 @@
 
         <!--FINALS START-->
         <div *ngIf="bracket['FNL']" class="col-md-3 finals">
-          <div [ngStyle]="{'margin-top': margin + 425 + marginSemi - fixMargin + 'px'}" class="col-md-12 wrapperGroup">
+          <div [ngStyle]="{'margin-top': margin + 425 + marginSemi - fixMargin - fixMarginDuo * 5.3 + 'px'}" class="col-md-12 wrapperGroup">
             <div class="col-md-12 headerGroupe">
               <div class="row">
                 <div class="col-md-3">
@@ -607,20 +620,39 @@
               </div>
             </div>
             <div class="col-md-12 groupe">
-              <div *ngFor="let item of bracket['FNL']['Heat'][0]['Competitor']" class="row">
+              <!--<div *ngFor="let item of bracket['FNL']['Heat'][0]['Competitor']" class="row">-->
+                <!--<div class="col-md-2">-->
+                  <!--<button *ngIf="item['Color'] === 'RED'" class="circleRed"></button>-->
+                  <!--<button *ngIf="item['Color'] === 'BLUE'" class="circleBlue"></button>-->
+                  <!--<button *ngIf="item['Color'] === 'YELLOW'" class="circleYellow"></button>-->
+                  <!--<button *ngIf="item['Color'] === 'GREEN'" class="circleGreen"></button>-->
+                  <!--<button *ngIf="item['Color'] === 'BLACK'" class="circleRed"></button>-->
+                  <!--<button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>-->
+                <!--</div>-->
+                <!--<div class="col-md-6">-->
+                  <!--<span *ngIf="item.Surname.length > surNameLngth">{{ item.Name.charAt(0) + '.' }} {{item.Surname}}</span>-->
+                  <!--<span *ngIf="item.Surname.length <= surNameLngth">{{ item.Name}} {{item.Surname}}</span>-->
+                <!--</div>-->
+                <!--<div class="col-md-1 flag" *ngIf="item.NOC">-->
+                    <!--<img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">-->
+                <!--</div>-->
+                <!--<div class="col-md-2">-->
+                  <!--<span>{{ item.NOC }}</span>-->
+                <!--</div>-->
+                <!--<div class="col-md-1 rank">-->
+                  <!--<span>{{ item.Position }}</span>-->
+                <!--</div>-->
+              <!--</div>-->
+              <div *ngFor="let item of data[0]" class="row">
                 <div class="col-md-2">
-                  <button *ngIf="item['Color'] === 'RED'" class="circleRed"></button>
-                  <button *ngIf="item['Color'] === 'BLUE'" class="circleBlue"></button>
-                  <button *ngIf="item['Color'] === 'YELLOW'" class="circleYellow"></button>
-                  <button *ngIf="item['Color'] === 'GREEN'" class="circleGreen"></button>
-                  <button *ngIf="item['Color'] === 'BLACK'" class="circleRed"></button>
-                  <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
+                  <!--<span>{{item.Bib }}</span>-->
+                  <button class="circleYellow"></button>
                 </div>
                 <div class="col-md-6">
                   <span>{{ item.Name }} {{item.Surname}}</span>
                 </div>
-                <div class="col-md-1 flag" *ngIf="item.NOC">
-                    <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
+                <div class="col-md-1 flag">
+                  <img src="../../assets/ukr.png" alt="FLAG">
                 </div>
                 <div class="col-md-2">
                   <span>{{ item.NOC }}</span>
@@ -633,7 +665,7 @@
           </div>
 
 
-          <div [ngStyle]="{'margin-top': margin - 36 + 'px'}" class="col-md-12 wrapperGroup">
+          <div [ngStyle]="{'margin-top': margin - 36 + fixMarginDuo / 2 + 'px'}" class="col-md-12 wrapperGroup">
             <div class="col-md-12 headerGroupe">
               <div class="row">
                 <div class="col-md-3">
