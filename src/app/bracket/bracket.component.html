@@ -15,7 +15,7 @@
           <span>Finals</span>
         </div>
       </div>
-      <div class="col-md-12 bodyTable">
+      <div *ngIf="bracket['8FNL']" class="col-md-12 bodyTable">
         <div class="col-md-3">
           <div class="row">
             <div class="col-md-12 headerGroupe">
@@ -32,16 +32,21 @@
               </div>
             </div>
             <div class="col-md-12 groupe">
-              <div *ngFor="let item of data[0]" class="row">
+              <div *ngFor="let item of bracket['8FNL']['Heat'][0]['Competitor']" class="row">
                 <div class="col-md-2">
                   <!--<span>{{item.Bib }}</span>-->
-                  <button class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'RED'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'BLUE'" class="circleBlue"></button>
+                  <button *ngIf="item['Color'] === 'YELLOW'" class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'GREEN'" class="circleGreen"></button>
+                  <button *ngIf="item['Color'] === 'BLACK'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
                   <span>{{ item.Name }} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
-                  <img src="../../assets/ukr.png" alt="FLAG">
+                  <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
                 </div>
                 <div class="col-md-2">
                   <span>{{ item.NOC }}</span>
@@ -66,16 +71,21 @@
               </div>
             </div>
             <div class="col-md-12 groupe">
-              <div *ngFor="let item of data[0]" class="row">
+              <div *ngFor="let item of  bracket['8FNL']['Heat'][1]['Competitor']" class="row">
                 <div class="col-md-2">
                   <!--<span>{{item.Bib }}</span>-->
-                  <button class="circleGreen"></button>
+                  <button *ngIf="item['Color'] === 'RED'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'BLUE'" class="circleBlue"></button>
+                  <button *ngIf="item['Color'] === 'YELLOW'" class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'GREEN'" class="circleGreen"></button>
+                  <button *ngIf="item['Color'] === 'BLACK'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
                   <span>{{ item.Name }} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
-                  <img src="../../assets/ukr.png" alt="FLAG">
+                  <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
                 </div>
                 <div class="col-md-2">
                   <span>{{ item.NOC }}</span>
@@ -101,16 +111,21 @@
               </div>
             </div>
             <div class="col-md-12 groupe">
-              <div *ngFor="let item of data[0]" class="row">
+              <div *ngFor="let item of bracket['8FNL']['Heat'][2]['Competitor']" class="row">
                 <div class="col-md-2">
                   <!--<span>{{item.Bib }}</span>-->
-                  <button class="circleBlue"></button>
+                  <button *ngIf="item['Color'] === 'RED'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'BLUE'" class="circleBlue"></button>
+                  <button *ngIf="item['Color'] === 'YELLOW'" class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'GREEN'" class="circleGreen"></button>
+                  <button *ngIf="item['Color'] === 'BLACK'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
                   <span>{{ item.Name }} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
-                  <img src="../../assets/ukr.png" alt="FLAG">
+                  <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
                 </div>
                 <div class="col-md-2">
                   <span>{{ item.NOC }}</span>
@@ -136,16 +151,20 @@
               </div>
             </div>
             <div class="col-md-12 groupe">
-              <div *ngFor="let item of data[0]" class="row">
+              <div *ngFor="let item of bracket['8FNL']['Heat'][3]['Competitor']" class="row">
                 <div class="col-md-2">
-                  <!--<span>{{item.Bib }}</span>-->
-                  <button class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'RED'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'BLUE'" class="circleBlue"></button>
+                  <button *ngIf="item['Color'] === 'YELLOW'" class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'GREEN'" class="circleGreen"></button>
+                  <button *ngIf="item['Color'] === 'BLACK'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
                   <span>{{ item.Name }} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
-                  <img src="../../assets/ukr.png" alt="FLAG">
+                  <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
                 </div>
                 <div class="col-md-2">
                   <span>{{ item.NOC }}</span>
@@ -171,16 +190,21 @@
               </div>
             </div>
             <div class="col-md-12 groupe">
-              <div *ngFor="let item of data[0]" class="row">
+              <div *ngFor="let item of bracket['8FNL']['Heat'][4]['Competitor']" class="row">
                 <div class="col-md-2">
                   <!--<span>{{item.Bib }}</span>-->
-                  <button class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'RED'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'BLUE'" class="circleBlue"></button>
+                  <button *ngIf="item['Color'] === 'YELLOW'" class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'GREEN'" class="circleGreen"></button>
+                  <button *ngIf="item['Color'] === 'BLACK'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
                   <span>{{ item.Name }} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
-                  <img src="../../assets/ukr.png" alt="FLAG">
+                  <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
                 </div>
                 <div class="col-md-2">
                   <span>{{ item.NOC }}</span>
@@ -206,16 +230,21 @@
               </div>
             </div>
             <div class="col-md-12 groupe">
-              <div *ngFor="let item of data[0]" class="row">
+              <div *ngFor="let item of bracket['8FNL']['Heat'][5]['Competitor']" class="row">
                 <div class="col-md-2">
                   <!--<span>{{item.Bib }}</span>-->
-                  <button class="circleBlue"></button>
+                  <button *ngIf="item['Color'] === 'RED'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'BLUE'" class="circleBlue"></button>
+                  <button *ngIf="item['Color'] === 'YELLOW'" class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'GREEN'" class="circleGreen"></button>
+                  <button *ngIf="item['Color'] === 'BLACK'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
                   <span>{{ item.Name }} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
-                  <img src="../../assets/ukr.png" alt="FLAG">
+                  <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
                 </div>
                 <div class="col-md-2">
                   <span>{{ item.NOC }}</span>
@@ -241,16 +270,21 @@
               </div>
             </div>
             <div class="col-md-12 groupe">
-              <div *ngFor="let item of data[0]" class="row">
+              <div *ngFor="let item of bracket['8FNL']['Heat'][6]['Competitor']" class="row">
                 <div class="col-md-2">
                   <!--<span>{{item.Bib }}</span>-->
-                  <button class="circleGreen"></button>
+                  <button *ngIf="item['Color'] === 'RED'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'BLUE'" class="circleBlue"></button>
+                  <button *ngIf="item['Color'] === 'YELLOW'" class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'GREEN'" class="circleGreen"></button>
+                  <button *ngIf="item['Color'] === 'BLACK'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
                   <span>{{ item.Name }} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
-                  <img src="../../assets/ukr.png" alt="FLAG">
+                  <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
                 </div>
                 <div class="col-md-2">
                   <span>{{ item.NOC }}</span>
@@ -276,16 +310,20 @@
               </div>
             </div>
             <div class="col-md-12 groupe">
-              <div *ngFor="let item of data[0]" class="row">
+              <div *ngFor="let item of bracket['8FNL']['Heat'][7]['Competitor']" class="row">
                 <div class="col-md-2">
-                  <!--<span>{{item.Bib }}</span>-->
-                  <button class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'RED'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'BLUE'" class="circleBlue"></button>
+                  <button *ngIf="item['Color'] === 'YELLOW'" class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'GREEN'" class="circleGreen"></button>
+                  <button *ngIf="item['Color'] === 'BLACK'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
                   <span>{{ item.Name }} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
-                  <img src="../../assets/ukr.png" alt="FLAG">
+                  <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
                 </div>
                 <div class="col-md-2">
                   <span>{{ item.NOC }}</span>
@@ -300,7 +338,7 @@
         </div>
 
         <!--QUARTERFINALS START-->
-        <div class="col-md-3 quarterfinals">
+        <div *ngIf="bracket['QFNL']" class="col-md-3 quarterfinals">
           <div [ngStyle]="{'margin-top': margin + 'px'}" class="col-md-12 wrapperGroup">
             <div class="col-md-12 headerGroupe">
               <div class="row">
@@ -316,16 +354,20 @@
               </div>
             </div>
             <div class="col-md-12 groupe">
-              <div *ngFor="let item of data[0]" class="row">
+              <div *ngFor="let item of bracket['QFNL']['Heat'][0]['Competitor']" class="row">
                 <div class="col-md-2">
-                  <!--<span>{{item.Bib }}</span>-->
-                  <button class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'RED'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'BLUE'" class="circleBlue"></button>
+                  <button *ngIf="item['Color'] === 'YELLOW'" class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'GREEN'" class="circleGreen"></button>
+                  <button *ngIf="item['Color'] === 'BLACK'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
                   <span>{{ item.Name }} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
-                  <img src="../../assets/ukr.png" alt="FLAG">
+                  <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
                 </div>
                 <div class="col-md-2">
                   <span>{{ item.NOC }}</span>
@@ -353,16 +395,20 @@
               </div>
             </div>
             <div class="col-md-12 groupe">
-              <div *ngFor="let item of data[0]" class="row">
+              <div *ngFor="let item of bracket['QFNL']['Heat'][1]['Competitor']" class="row">
                 <div class="col-md-2">
-                  <!--<span>{{item.Bib }}</span>-->
-                  <button class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'RED'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'BLUE'" class="circleBlue"></button>
+                  <button *ngIf="item['Color'] === 'YELLOW'" class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'GREEN'" class="circleGreen"></button>
+                  <button *ngIf="item['Color'] === 'BLACK'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
                   <span>{{ item.Name }} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
-                  <img src="../../assets/ukr.png" alt="FLAG">
+                  <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
                 </div>
                 <div class="col-md-2">
                   <span>{{ item.NOC }}</span>
@@ -389,16 +435,20 @@
               </div>
             </div>
             <div class="col-md-12 groupe">
-              <div *ngFor="let item of data[0]" class="row">
+              <div *ngFor="let item of bracket['QFNL']['Heat'][2]['Competitor']" class="row">
                 <div class="col-md-2">
-                  <!--<span>{{item.Bib }}</span>-->
-                  <button class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'RED'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'BLUE'" class="circleBlue"></button>
+                  <button *ngIf="item['Color'] === 'YELLOW'" class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'GREEN'" class="circleGreen"></button>
+                  <button *ngIf="item['Color'] === 'BLACK'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
                   <span>{{ item.Name }} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
-                  <img src="../../assets/ukr.png" alt="FLAG">
+                  <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
                 </div>
                 <div class="col-md-2">
                   <span>{{ item.NOC }}</span>
@@ -426,16 +476,20 @@
               </div>
             </div>
             <div class="col-md-12 groupe">
-              <div *ngFor="let item of data[0]" class="row">
+              <div *ngFor="let item of  bracket['QFNL']['Heat'][3]['Competitor']" class="row">
                 <div class="col-md-2">
-                  <!--<span>{{item.Bib }}</span>-->
-                  <button class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'RED'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'BLUE'" class="circleBlue"></button>
+                  <button *ngIf="item['Color'] === 'YELLOW'" class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'GREEN'" class="circleGreen"></button>
+                  <button *ngIf="item['Color'] === 'BLACK'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
                   <span>{{ item.Name }} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
-                  <img src="../../assets/ukr.png" alt="FLAG">
+                  <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
                 </div>
                 <div class="col-md-2">
                   <span>{{ item.NOC }}</span>
@@ -451,7 +505,7 @@
         <!--QUARTERFINALS END-->
 
         <!--SEMIFINALS START-->
-        <div class="col-md-3 semifinals">
+        <div *ngIf="bracket['SFNL']" class="col-md-3 semifinals">
           <div [ngStyle]="{'margin-top': margin + 152 + marginSemi  + 'px'}" class="col-md-12 wrapperGroup">
             <div class="col-md-12 headerGroupe">
               <div class="row">
@@ -467,16 +521,20 @@
               </div>
             </div>
             <div class="col-md-12 groupe">
-              <div *ngFor="let item of data[0]" class="row">
+              <div *ngFor="let item of bracket['SFNL']['Heat'][0]['Competitor']" class="row">
                 <div class="col-md-2">
-                  <!--<span>{{item.Bib }}</span>-->
-                  <button class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'RED'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'BLUE'" class="circleBlue"></button>
+                  <button *ngIf="item['Color'] === 'YELLOW'" class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'GREEN'" class="circleGreen"></button>
+                  <button *ngIf="item['Color'] === 'BLACK'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
                   <span>{{ item.Name }} {{item.Surname}}</span>
                 </div>
                 <div class="col-md-1 flag">
-                  <img src="../../assets/ukr.png" alt="FLAG">
+                  <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
                 </div>
                 <div class="col-md-2">
                   <span>{{ item.NOC }}</span>
@@ -504,16 +562,20 @@
               </div>
             </div>
             <div class="col-md-12 groupe">
-              <div *ngFor="let item of data[0]" class="row">
+              <div *ngFor="let item of bracket['SFNL']['Heat'][1]['Competitor']" class="row">
                 <div class="col-md-2">
-                  <!--<span>{{item.Bib }}</span>-->
-                  <button class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'RED'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'BLUE'" class="circleBlue"></button>
+                  <button *ngIf="item['Color'] === 'YELLOW'" class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'GREEN'" class="circleGreen"></button>
+                  <button *ngIf="item['Color'] === 'BLACK'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
                   <span>{{ item.Name }} {{item.Surname}}</span>
                 </div>
-                <div class="col-md-1 flag">
-                  <img src="../../assets/ukr.png" alt="FLAG">
+                <div class="col-md-1 flag" *ngIf="item.NOC">
+                  <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
                 </div>
                 <div class="col-md-2">
                   <span>{{ item.NOC }}</span>
@@ -529,7 +591,7 @@
 
 
         <!--FINALS START-->
-        <div class="col-md-3 finals">
+        <div *ngIf="bracket['FNL']" class="col-md-3 finals">
           <div [ngStyle]="{'margin-top': margin + 425 + marginSemi - fixMargin + 'px'}" class="col-md-12 wrapperGroup">
             <div class="col-md-12 headerGroupe">
               <div class="row">
@@ -545,16 +607,20 @@
               </div>
             </div>
             <div class="col-md-12 groupe">
-              <div *ngFor="let item of data[0]" class="row">
+              <div *ngFor="let item of bracket['FNL']['Heat'][0]['Competitor']" class="row">
                 <div class="col-md-2">
-                  <!--<span>{{item.Bib }}</span>-->
-                  <button class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'RED'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'BLUE'" class="circleBlue"></button>
+                  <button *ngIf="item['Color'] === 'YELLOW'" class="circleYellow"></button>
+                  <button *ngIf="item['Color'] === 'GREEN'" class="circleGreen"></button>
+                  <button *ngIf="item['Color'] === 'BLACK'" class="circleRed"></button>
+                  <button *ngIf="item['Color'] === 'WHITE'" class="circleRed"></button>
                 </div>
                 <div class="col-md-6">
                   <span>{{ item.Name }} {{item.Surname}}</span>
                 </div>
-                <div class="col-md-1 flag">
-                  <img src="../../assets/ukr.png" alt="FLAG">
+                <div class="col-md-1 flag" *ngIf="item.NOC">
+                    <img src="../../assets/{{low(item.NOC)}}.png" alt="FLAG">
                 </div>
                 <div class="col-md-2">
                   <span>{{ item.NOC }}</span>

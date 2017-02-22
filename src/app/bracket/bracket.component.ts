@@ -22,10 +22,42 @@ export class BracketComponent {
     });
   }
 
+  bracket = {};
+
   getBracket(){
     this.dataService.getBracket(this.sport, this.discipline, this.gender).subscribe((data) => {
-      // this.data = data.json();
-      console.log(data.json())
+      for(let item of data){
+        console.log(item)
+        switch (item["Code"]){
+          case("8FNL"):
+            console.log(item);
+            this.bracket["8FNL"] = item;
+            break;
+          case("QFNL"):
+            console.log(item);
+            this.bracket["QFNL"] = item;
+            break;
+          case("SFNL"):
+            console.log(item);
+            this.bracket["SFNL"] = item;
+            break;
+          case("FNL"):
+            console.log(item);
+            this.bracket["FNL"] = item;
+            break;
+        }
+      }
+      if(this.bracket['8FNL']['Heat'][0]['Competitor'].length === 6){
+        this.margin = 123;
+        this.marginSemi = 53;
+        this.fixMargin = 0
+      }
+
+      if(this.bracket['8FNL']['Heat'][0]['Competitor'].length === 2){
+        this.margin = 30;
+        this.marginSemi = 15;
+        this.fixMargin = 0
+      }
     })
   }
 
@@ -90,11 +122,14 @@ export class BracketComponent {
   ]]
   ngOnInit(){
 
-    if(this.data[0].length === 6){
-      this.margin = 123;
-      this.marginSemi = 53;
-      this.fixMargin = 0
-    }
 
+
+  }
+
+  low(key){
+    if(key)
+      return key.toLowerCase();
+    else
+      return "";
   }
 }

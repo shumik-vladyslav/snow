@@ -24,7 +24,8 @@ export class DataService {
   }
 
   getBracket(sport, discipline, gender){
-    return this.http.get(this.url + `getBracket/${sport}/${discipline}/${gender}`)
+    return this.http.get(this.url + `getBracket/${sport}/${discipline}/${gender}/`)
+      .map(res => res.json())
   }
 
   getButtons(sport, discipline, gender, phase){

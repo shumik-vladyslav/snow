@@ -41,7 +41,7 @@ export class GendersComponent {
             name: "Finals",
             color: "red",
             genders: "M",
-            phase: "QUAL",
+            phase: "FNL-",
             heat: "----",
             run: "----"
           }
@@ -68,7 +68,7 @@ export class GendersComponent {
             name: "Finals",
             color: "orange",
             genders: "W",
-            phase: "QUAL",
+            phase: "FNL-",
             heat: "----",
             run: "----"
           }

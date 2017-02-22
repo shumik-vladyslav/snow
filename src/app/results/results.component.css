@@ -68,3 +68,7 @@ ul.nav.nav-tabs li button .active{
 .score{
   padding: 5px 0;
 }
+
+.padd{
+  width: 12% !important;
+}

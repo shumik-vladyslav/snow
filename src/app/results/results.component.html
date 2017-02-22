@@ -15,7 +15,7 @@
       <div class="col-md-2 current">
         <span>Current Athlete</span>
       </div>
-      <div class="col-md-4 name">
+      <div class="col-md-3 name">
         <div class="row">
           <div class="col-md-1">
             <span>{{current.liveData.currentAthlete.BIB}}</span>
@@ -27,9 +27,9 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3 position">
+      <div class="col-md-4 position">
         <div class="row">
-          <div *ngFor="let item of current.liveData.DetailScores" class="col-md-2">
+          <div *ngFor="let item of current.liveData.DetailScores" class="col-md-1 padd">
             <span>{{item.Judge}}</span><br>
              <span>{{item.Score}}</span>
           </div>
@@ -101,12 +101,12 @@
 <table *ngIf="data && GridConfig" class="table table-condensed table-striped">
   <thead>
   <tr>
-    <th *ngFor="let key of GridConfig | keys">{{GridConfig[key]}}</th>
+    <th *ngFor="let key of GridConfig | keys" style="text-align: center;">{{GridConfig[key]['Name']}}</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let item of data">
-    <td *ngFor="let key of GridConfig | keys">
+    <td *ngFor="let key of GridConfig | keys" [ngStyle]="GridConfig[key]['Style']">
       <span *ngIf="key !== 'NOC' && key !== 'Name'">{{item[key]}}</span>
       <span *ngIf="key === 'Name'">
             {{item['Surname']}} {{item[key]}}
